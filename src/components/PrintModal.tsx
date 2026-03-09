@@ -9,7 +9,7 @@ interface PrintModalProps {
 
 export default function PrintModal({ student, setStudent, onClose, onConfirm }: PrintModalProps) {
     return (
-        <div className="fixed inset-0 bg-black/50 z-[100] flex justify-center items-center p-4">
+        <div className="fixed inset-0 bg-black/50 z-[100] flex justify-center items-center p-4 print:hidden">
             <div
                 className="bg-card rounded-radius shadow-xl w-full max-w-[540px] overflow-hidden flex flex-col"
                 onClick={e => e.stopPropagation()} // Stop click through

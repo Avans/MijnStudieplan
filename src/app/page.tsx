@@ -179,7 +179,7 @@ export default function Home() {
           onClose={() => setIsPrintModalOpen(false)}
           onConfirm={() => {
             setIsPrintModalOpen(false);
-            window.print();
+            setTimeout(() => window.print(), 100);
           }}
         />
       )}
