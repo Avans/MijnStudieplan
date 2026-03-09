@@ -229,18 +229,29 @@ async function loadSavedState() {
 // ============================================================
 function render() {
   const app = document.getElementById('app');
-  app.innerHTML = renderHeader() + `<main>${renderStep()}</main>` + renderPrintView();
+  app.innerHTML = renderHeader() + `<main>${renderStep()}</main>` + renderPrintModal() + renderPrintView();
   bindAll();
 }
 
 function renderHeader() {
   const steps = ['Opleiding kiezen', 'Studieplan'];
+
+  let actionsHtml = '';
+  if (S.step === 2) {
+    actionsHtml = `
+      <div class="header-actions" style="display:flex; gap:10px; align-items:center;">
+        <button class="btn btn-save btn-sm" id="btn-save">💾 Opslaan${S.lastSaved ? ` (${S.lastSaved})` : ''}</button>
+        <button class="btn btn-print btn-sm" id="btn-print">🖨 Afdrukken / PDF</button>
+      </div>`;
+  }
+
   return `
   <header>
     <div class="header-inner">
-      <h1>Mijn Studiepad</h1>
-      <nav class="steps" aria-label="Stappen">
-        ${steps.map((n, i) => {
+      <div class="header-brand-steps" style="display:flex; align-items:center; gap:24px; flex-wrap:wrap;">
+        <h1>Mijn Studiepad</h1>
+        <nav class="steps" aria-label="Stappen">
+          ${steps.map((n, i) => {
     const num = i + 1;
     const cls = num === S.step ? 'active' : num < S.step ? 'done' : '';
     const label = num < S.step ? '✓' : num;
@@ -250,7 +261,9 @@ function renderHeader() {
               <span class="step-name">${n}</span>
             </div>`;
   }).join('')}
-      </nav>
+        </nav>
+      </div>
+      ${actionsHtml}
     </div>
   </header>`;
 }
@@ -298,11 +311,20 @@ function renderStep1() {
 function renderStep2() {
   const padKeys = Object.keys(S.studiepaden || {});
   const padSelectHtml = padKeys.length > 0 ? `
-    <div class="pad-selector" style="margin-bottom: 20px;">
-      <label for="pad-select"><strong>Studiepad:</strong></label>
-      <select id="pad-select" class="form-control" style="max-width:300px; display:inline-block; margin-left: 10px;">
-        ${padKeys.map(k => `<option value="${esc(k)}"${k === S.selectedPad ? ' selected' : ''}>${esc(k)}</option>`).join('')}
-      </select>
+    <div class="pad-selector-wrapper">
+      <div class="pad-selector">
+        <label for="pad-select" class="pad-label">Jouw studiepad</label>
+        <div class="select-wrapper">
+          <select id="pad-select" class="pad-select" aria-label="Kies je studiepad">
+            ${padKeys.map(k => {
+    const capLabel = k.charAt(0).toUpperCase() + k.slice(1);
+    return `<option value="${esc(k)}"${k === S.selectedPad ? ' selected' : ''}>${esc(capLabel)}</option>`;
+  }).join('')}
+          </select>
+          <div class="select-arrow">▼</div>
+        </div>
+      </div>
+      <div class="pad-info">Kies het gewenste traject. De planning wordt automatisch aangepast aan het aanbevolen programma.</div>
     </div>
   ` : '';
 
@@ -397,9 +419,21 @@ function renderStep2() {
       </div>
     </div>
 
-    <details class="student-details">
-      <summary class="student-summary">▸ Studentgegevens (voor afdrukken)</summary>
-      <div class="student-form">
+    <div class="step-nav">
+      <button class="btn btn-secondary" id="back-1">← Terug</button>
+    </div>
+  </div>`;
+}
+
+// ─── Print Modal ───────────────────────────────────────────────
+function renderPrintModal() {
+  if (S.step !== 2) return '';
+  return `
+  <dialog id="print-modal" class="print-modal">
+    <div class="print-modal-inner">
+      <h3 style="margin-bottom:6px;">Studentgegevens</h3>
+      <p class="subtitle" style="margin-bottom:16px;">Vul je gegevens in zodat ze op het PDF/geprinte studieplan verschijnen.</p>
+      <div class="student-form" style="margin-bottom:0; border:none; padding:0;">
         <div class="form-row">
           <label>Naam student
             <input type="text" id="f-name" value="${esc(S.student.name)}" placeholder="Volledige naam">
@@ -417,16 +451,12 @@ function renderStep2() {
           </label>
         </div>
       </div>
-    </details>
-
-    <div class="step-nav">
-      <button class="btn btn-secondary" id="back-1">← Terug</button>
-      <div class="step-nav-right">
-        <button class="btn btn-save" id="btn-save">💾 Opslaan${S.lastSaved ? ` (${S.lastSaved})` : ''}</button>
-        <button class="btn btn-print" id="btn-print">🖨 Afdrukken / PDF</button>
+      <div class="modal-actions" style="margin-top:24px; display:flex; justify-content:flex-end; gap:12px;">
+        <button class="btn btn-secondary" id="btn-cancel-print">Annuleren</button>
+        <button class="btn btn-print" id="btn-confirm-print">Bevestig & Print</button>
       </div>
     </div>
-  </div>`;
+  </dialog>`;
 }
 
 // ─── Print view (only shown @media print) ───────────────────
@@ -671,9 +701,24 @@ function bindAll() {
 
   // ── Print ────────────────────────────────────────────────
   on('btn-print', () => {
-    const pv = document.getElementById('print-view');
-    if (pv) pv.outerHTML = renderPrintView();
-    window.print();
+    const dialog = document.getElementById('print-modal');
+    if (dialog) dialog.showModal();
+  });
+
+  on('btn-cancel-print', () => {
+    const dialog = document.getElementById('print-modal');
+    if (dialog) dialog.close();
+  });
+
+  on('btn-confirm-print', () => {
+    const dialog = document.getElementById('print-modal');
+    if (dialog) dialog.close();
+    // setTimeout lost een edge-case op waarbij de print dialoog nog zichtbaar is op PDF rendering
+    setTimeout(() => {
+      const pv = document.getElementById('print-view');
+      if (pv) pv.outerHTML = renderPrintView();
+      window.print();
+    }, 150);
   });
 
   // ── Drag & Drop (LU-niveau) ──────────────────────────────

@@ -406,6 +406,84 @@ main {
 }
 
 /* ============================================================
+   STUDIEPAD SELECTOR
+   ============================================================ */
+.pad-selector-wrapper {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pad-selector {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pad-label {
+  font-weight: 600;
+  font-size: .95rem;
+  color: var(--text);
+  min-width: max-content;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+}
+
+.pad-select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 40px 10px 14px;
+  font-size: .95rem;
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+.pad-select:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.pad-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+  background: #fff;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: .7rem;
+  pointer-events: none;
+}
+
+.pad-info {
+  font-size: .82rem;
+  color: var(--muted);
+}
+
+/* ============================================================
    STEP 3 – STUDIEPLAN
    ============================================================ */
 .student-form {
@@ -759,6 +837,28 @@ main {
 }
 
 /* ============================================================
+   PRINT MODAL
+   ============================================================ */
+.print-modal {
+  margin: auto;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  max-width: 540px;
+  width: 100%;
+}
+
+.print-modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.print-modal-inner {
+  padding: 24px;
+  background: var(--card);
+}
+
+/* ============================================================
    PRINT VIEW  –  verborgen op scherm
    ============================================================ */
 .print-view {
@@ -932,13 +1032,19 @@ main {
   gap: 6px;
 }
 
-.curriculum-summary::-webkit-details-marker { display: none; }
+.curriculum-summary::-webkit-details-marker {
+  display: none;
+}
+
 .curriculum-summary::before {
   content: '▶';
   font-size: .65rem;
   transition: transform .2s;
 }
-details[open] .curriculum-summary::before { transform: rotate(90deg); }
+
+details[open] .curriculum-summary::before {
+  transform: rotate(90deg);
+}
 
 .curriculum-grid-outer {
   padding: 14px 0 6px;
@@ -953,7 +1059,7 @@ details[open] .curriculum-summary::before { transform: rotate(90deg); }
 }
 
 .cg-corner {
-  /* empty top-left cell */
+  display: block;
 }
 
 .cg-header {
@@ -1050,7 +1156,7 @@ details[open] .curriculum-summary::before { transform: rotate(90deg); }
 }
 
 .pg-corner {
-  /* empty top-left */
+  display: block;
 }
 
 .pg-header {
@@ -1194,6 +1300,7 @@ details[open] .curriculum-summary::before { transform: rotate(90deg); }
   color: var(--success);
   border: 1px solid #bbf7d0;
 }
+
 .btn-save:hover {
   background: #dcfce7;
   border-color: #86efac;
@@ -1255,17 +1362,26 @@ details[open] .curriculum-summary::before { transform: rotate(90deg); }
   user-select: none;
   transition: opacity .15s;
 }
-.lu-item:active { cursor: grabbing; }
+
+.lu-item:active {
+  cursor: grabbing;
+}
+
 .lu-item.achieved {
   background: #f0fdf4;
   border-color: #bbf7d0;
   opacity: .75;
 }
+
 .lu-item.achieved .lu-name {
   text-decoration: line-through;
   color: var(--muted);
 }
-.lu-item.dragging { opacity: .35; }
+
+.lu-item.dragging {
+  opacity: .35;
+}
+
 .lu-check {
   flex-shrink: 0;
   width: 14px;
@@ -1273,6 +1389,7 @@ details[open] .curriculum-summary::before { transform: rotate(90deg); }
   cursor: pointer;
   accent-color: var(--success);
 }
+
 .lu-badge {
   font-size: .62rem;
   font-weight: 700;
@@ -1283,11 +1400,13 @@ details[open] .curriculum-summary::before { transform: rotate(90deg); }
   flex-shrink: 0;
   white-space: nowrap;
 }
+
 .lu-info {
   flex: 1;
   min-width: 0;
   overflow: hidden;
 }
+
 .lu-name {
   display: block;
   white-space: nowrap;
@@ -1295,6 +1414,7 @@ details[open] .curriculum-summary::before { transform: rotate(90deg); }
   text-overflow: ellipsis;
   line-height: 1.3;
 }
+
 .lu-ec {
   font-size: .68rem;
   font-weight: 700;
@@ -1319,6 +1439,7 @@ details[open] .curriculum-summary::before { transform: rotate(90deg); }
   background: var(--card);
   overflow: hidden;
 }
+
 .student-summary {
   padding: 12px 16px;
   cursor: pointer;
@@ -1329,7 +1450,11 @@ details[open] .curriculum-summary::before { transform: rotate(90deg); }
   background: var(--primary-light);
   user-select: none;
 }
-.student-summary::-webkit-details-marker { display: none; }
+
+.student-summary::-webkit-details-marker {
+  display: none;
+}
+
 .student-details[open] .student-form {
   padding: 12px 16px 16px;
 }
@@ -1343,12 +1468,14 @@ details[open] .curriculum-summary::before { transform: rotate(90deg); }
   font-size: .85rem;
   margin-top: 6px;
 }
+
 .pv-achieved-table th,
 .pv-achieved-table td {
   border: 1px solid #ccc;
   padding: 4px 8px;
   vertical-align: top;
 }
+
 .pv-achieved-table th {
   background: #f8fafc;
   font-weight: 600;
