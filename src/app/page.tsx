@@ -36,19 +36,54 @@ export default function Home() {
 
   // Modals
   const [isPrintModalOpen, setIsPrintModalOpen] = useState(false);
+  const [savedData, setSavedData] = useState<any>(null);
 
   useEffect(() => {
     // Check local storage for resumed app state on mount
     const saved = localStorage.getItem('mijnStudiepad');
     if (saved) {
       try {
-        const parsed = JSON.stringify(saved);
-        // We will implement load logic here if needed or let user resume
+        const parsed = JSON.parse(saved);
+        if (parsed.timestamp && parsed.opleidingUrl) {
+          setSavedData(parsed);
+        }
       } catch (e) {
         // console.error(e)
       }
     }
   }, []);
+
+  const resumeCurriculum = async () => {
+    if (!savedData) return;
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch(savedData.opleidingUrl);
+      if (!res.ok) throw new Error('Kon JSON niet laden');
+      const rawData = await res.json();
+
+      const parsedModules = parseJSON(rawData);
+      const data: CurriculumData = {
+        studiepaden: rawData.studiepaden || {},
+        modules: parsedModules
+      };
+
+      setCurriculum(data);
+      setOpleidingUrl(savedData.opleidingUrl);
+      setSelectedPad(savedData.selectedPad || '');
+      setPlanGrid(savedData.planGrid || {});
+      setAchieved(new Set(savedData.achieved || []));
+      setCommentOpen(new Set(savedData.commentOpen || []));
+      if (savedData.student) setStudent(savedData.student);
+
+      setStep(2);
+      toast.success('Studieplan hervat!');
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const loadCurriculum = async (url: string) => {
     setLoading(true);
@@ -113,6 +148,12 @@ export default function Home() {
           <Step1
             onSelectOpleiding={loadCurriculum}
             loading={loading}
+            savedTimestamp={savedData?.timestamp}
+            onResume={resumeCurriculum}
+            onClear={() => {
+              localStorage.removeItem('mijnStudiepad');
+              setSavedData(null);
+            }}
           />
         )}
 
