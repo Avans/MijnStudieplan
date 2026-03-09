@@ -230,7 +230,7 @@ async function loadSavedState() {
 // ============================================================
 function render() {
   const app = document.getElementById('app');
-  app.innerHTML = renderHeader() + `<main>${renderStep()}</main>` + renderPrintModal() + renderInfoModalContainer() + renderPrintView();
+  app.innerHTML = renderHeader() + `<main>${renderStep()}</main>` + renderPrintModal() + renderInfoModalContainer() + renderConfirmModal() + renderPrintView();
   bindAll();
 }
 
@@ -458,6 +458,21 @@ function renderInfoModalContainer() {
   </dialog>`;
 }
 
+// ─── Confirm Modal ──────────────────────────────────────────────
+function renderConfirmModal() {
+  return `
+  <dialog id="confirm-modal" class="print-modal" onclick="if(event.target===this)this.close()">
+    <div class="print-modal-inner" style="max-width: 440px; text-align: center;">
+      <h3 style="margin-bottom:12px; color: var(--avans-rood, var(--primary));">Weet je het zeker?</h3>
+      <p style="margin-bottom:24px; color: var(--text);">Het wisselen van studiepad overschrijft je huidige planning (behaalde vinkjes blijven wel bewaard).</p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <button class="btn btn-secondary" id="btn-cancel-confirm">Annuleren</button>
+        <button class="btn btn-primary" id="btn-ok-confirm">Ja, doorgaan</button>
+      </div>
+    </div>
+  </dialog>`;
+}
+
 // ─── Print view (only shown @media print) ───────────────────
 function renderPrintView() {
   if (S.step !== 2) return '<div class="print-view"></div>';
@@ -653,12 +668,31 @@ function bindAll() {
   if (padSelect) {
     padSelect.addEventListener('change', e => {
       const newPad = e.target.value;
-      if (confirm('Het wisselen van studiepad overschrijft je huidige planning (behaalde vinkjes blijven wel bewaard). Wil je doorgaan?')) {
+
+      const defaultPlan = { grid: distributeItemsByStudiepad(S.modules, S.studiepaden[S.selectedPad]) };
+      const hasChanges = JSON.stringify(S.plan) !== JSON.stringify(defaultPlan) || S.commentOpen.size > 0;
+
+      const proceed = () => {
         S.selectedPad = newPad;
         S.plan = { grid: distributeItemsByStudiepad(S.modules, S.studiepaden[newPad]) };
+        S.commentOpen.clear();
         render();
+      };
+
+      if (!hasChanges) {
+        proceed();
       } else {
-        e.target.value = S.selectedPad; // reset
+        const dialog = document.getElementById('confirm-modal');
+        dialog.showModal();
+
+        document.getElementById('btn-ok-confirm').onclick = () => {
+          dialog.close();
+          proceed();
+        };
+        document.getElementById('btn-cancel-confirm').onclick = () => {
+          dialog.close();
+          e.target.value = S.selectedPad; // reset
+        };
       }
     });
   }
