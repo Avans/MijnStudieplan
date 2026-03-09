@@ -168,17 +168,24 @@ export default function Step2({
                                                 const kString = `${item.code}|${item.idx}`;
                                                 const isDone = achieved.has(kString);
 
+                                                const itemSpan = item.code.includes('-') ? 2 : 1;
+
                                                 return (
                                                     <div
                                                         key={`${item.code}-${item.idx}`}
                                                         draggable
                                                         onDragStart={(e) => onDragStart(e, item.code, item.idx, key)}
                                                         onClick={() => setInfoModalItem({ code: item.code, activeIdx: item.idx })}
-                                                        className={`flex items-center gap-1.5 p-1.5 border rounded cursor-grab bg-white transition-opacity select-none active:cursor-grabbing hover:shadow-sm hover:border-primary
-                              ${isDone ? 'bg-success-light border-[var(--success)] opacity-75' : 'border-border-subtle'}
+                                                        className={`flex items-center gap-1.5 p-1.5 border rounded cursor-grab bg-white transition-opacity select-none active:cursor-grabbing hover:shadow-sm hover:border-primary shrink-0
+                              ${isDone ? 'bg-success-light border-[var(--color-success)] opacity-75' : 'border-border-subtle'}
                             `}
+                                                        style={{
+                                                            width: itemSpan > 1 ? `calc(${itemSpan * 100}% + ${(itemSpan - 1) * 2.2}rem)` : '100%',
+                                                            position: 'relative',
+                                                            zIndex: itemSpan > 1 ? 10 : 1,
+                                                        }}
                                                     >
-                                                        <div className="flex-[1] min-w-0 overflow-hidden">
+                                                        <div className="flex-[1] min-w-0 overflow-hidden" style={{ minWidth: 0 }}>
                                                             <span className="text-[0.62rem] font-bold bg-primary-light text-primary rounded px-1 py-[1px] whitespace-nowrap mr-1">{item.code} <span className="font-normal opacity-80">{m.naam}</span></span>
                                                             <span className={`block whitespace-nowrap overflow-hidden text-ellipsis text-[0.78rem] leading-tight ${isDone ? 'line-through text-muted' : ''}`}>{out.name}</span>
                                                         </div>
