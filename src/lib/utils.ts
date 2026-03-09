@@ -16,7 +16,7 @@ export function parseJSON(data: any) {
                 description: lu.omschrijving || ''
             };
         });
-        return { code, name, jaar, periodes, outcomes };
+        return { code, name, naam: name, jaar, periodes, outcomes };
     }).filter((m: any) => m.code);
 }
 
