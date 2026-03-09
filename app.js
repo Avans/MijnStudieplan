@@ -420,7 +420,7 @@ function renderStep2() {
 function renderPrintModal() {
   if (S.step !== 2) return '';
   return `
-  <dialog id="print-modal" class="print-modal">
+  <dialog id="print-modal" class="print-modal" onclick="if(event.target===this)this.close()">
     <div class="print-modal-inner">
       <h3 style="margin-bottom:6px;">Studentgegevens</h3>
       <p class="subtitle" style="margin-bottom:16px;">Vul je gegevens in zodat ze op het PDF/geprinte studieplan verschijnen.</p>
@@ -453,7 +453,7 @@ function renderPrintModal() {
 // ─── Info Modal Container ──────────────────────────────────────
 function renderInfoModalContainer() {
   return `
-  <dialog id="info-modal" class="print-modal info-modal-styling">
+  <dialog id="info-modal" class="print-modal info-modal-styling" onclick="if(event.target===this)this.close()">
     <div class="print-modal-inner info-modal-inner" id="info-modal-content" style="max-height: 85vh; overflow-y: auto;"></div>
   </dialog>`;
 }
@@ -862,7 +862,7 @@ function showInfoModal(modCode, highlightIdx) {
     const isHighlighted = i === highlightIdx;
     const achieved = S.achieved.has(k(modCode, i));
     return `
-      <div class="info-outcome ${isHighlighted ? 'highlighted' : ''}">
+      <label class="info-outcome ${isHighlighted ? 'highlighted' : ''}" style="display:block; cursor:pointer;">
         <div class="info-outcome-header" style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 8px;">
           <div style="display:flex; align-items:center; gap: 10px;">
             <input type="checkbox" class="lu-check-modal" style="width:18px; height:18px; accent-color:var(--success); cursor:pointer;"
@@ -874,7 +874,7 @@ function showInfoModal(modCode, highlightIdx) {
         <div class="info-outcome-desc" style="font-size: 0.9rem; line-height: 1.6; color: var(--text);">
           ${esc(o.description || 'Geen uitgebreide omschrijving beschikbaar.').replace(/\n/g, '<br>')}
         </div>
-      </div>
+      </label>
     `;
   }).join('');
 
