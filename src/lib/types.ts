@@ -40,3 +40,4 @@ export interface PlanCell {
 
 // Map: "year_period" -> PlanCell
 export type PlanGrid = Record<string, PlanCell>;
+

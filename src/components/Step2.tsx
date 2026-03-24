@@ -12,10 +12,12 @@ interface Step2Props {
     setAchieved: Dispatch<SetStateAction<Set<string>>>;
     commentOpen: Set<string>;
     setCommentOpen: Dispatch<SetStateAction<Set<string>>>;
+    numYears: number;
+    setNumYears: Dispatch<SetStateAction<number>>;
 }
 
 export default function Step2({
-    curriculum, selectedPad, setSelectedPad, planGrid, setPlanGrid, achieved, setAchieved, commentOpen, setCommentOpen
+    curriculum, selectedPad, setSelectedPad, planGrid, setPlanGrid, achieved, setAchieved, commentOpen, setCommentOpen, numYears, setNumYears
 }: Step2Props) {
 
     const [draggedItem, setDraggedItem] = useState<{ code: string, idx: number, fromKey: string } | null>(null);
@@ -146,7 +148,7 @@ export default function Step2({
                     <div className="block"></div>
                     {[1, 2, 3, 4].map(p => <div key={p} className="bg-primary text-white text-[0.78rem] font-semibold text-center py-[7px] px-1 rounded-radius">Periode {p}</div>)}
 
-                    {[1, 2, 3, 4].map(y => (
+                    {Array.from({ length: numYears }, (_, i) => i + 1).map(y => (
                         <React.Fragment key={y}>
                             <div className="flex items-center justify-center text-[0.75rem] font-bold text-primary bg-primary-light rounded-radius p-1 text-center" style={{ writingMode: 'horizontal-tb' }}>Jaar {y}</div>
                             {[1, 2, 3, 4].map(p => {
@@ -249,6 +251,25 @@ export default function Step2({
                         </React.Fragment>
                     ))}
                 </div>
+            </div>
+
+            <div className="flex justify-center mt-4">
+                <button
+                    onClick={() => {
+                        const newY = numYears + 1;
+                        setPlanGrid(prev => {
+                            const g = { ...prev };
+                            for (let p = 1; p <= 4; p++) {
+                                g[`${newY}_${p}`] = { items: [], comment: '' };
+                            }
+                            return g;
+                        });
+                        setNumYears(newY);
+                    }}
+                    className="flex items-center gap-2 px-5 py-2 border-2 border-dashed border-border-subtle rounded-radius text-muted text-[0.9rem] hover:border-primary hover:text-primary transition-colors cursor-pointer"
+                >
+                    + Jaar toevoegen
+                </button>
             </div>
 
             {infoModalItem && (

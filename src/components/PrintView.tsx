@@ -6,9 +6,10 @@ interface PrintViewProps {
     curriculum: CurriculumData | null;
     planGrid: PlanGrid;
     achieved: Set<string>;
+    numYears: number;
 }
 
-export default function PrintView({ step, student, curriculum, planGrid, achieved }: PrintViewProps) {
+export default function PrintView({ step, student, curriculum, planGrid, achieved, numYears }: PrintViewProps) {
     if (step !== 2 || !curriculum) return <div className="hidden"></div>;
 
     const { name, number, coach, date } = student;
@@ -30,7 +31,7 @@ export default function PrintView({ step, student, curriculum, planGrid, achieve
     };
 
     // Verzamelen geplande items en opmerkingen
-    for (let y = 1; y <= 4; y++) {
+    for (let y = 1; y <= numYears; y++) {
         for (let p = 1; p <= 4; p++) {
             const key = `${y}_${p}`;
             const cell = planGrid[key];

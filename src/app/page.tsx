@@ -30,6 +30,7 @@ export default function Home() {
   // S.plan and S.achieved
   const [planGrid, setPlanGrid] = useState<PlanGrid>({});
   const [achieved, setAchieved] = useState<Set<string>>(new Set());
+  const [numYears, setNumYears] = useState<number>(4);
 
   // S.commentOpen
   const [commentOpen, setCommentOpen] = useState<Set<string>>(new Set());
@@ -74,6 +75,7 @@ export default function Home() {
       setPlanGrid(savedData.planGrid || {});
       setAchieved(new Set(savedData.achieved || []));
       setCommentOpen(new Set(savedData.commentOpen || []));
+      if (savedData.numYears) setNumYears(savedData.numYears);
       if (savedData.student) setStudent(savedData.student);
 
       setStep(2);
@@ -128,6 +130,7 @@ export default function Home() {
       achieved: Array.from(achieved),
       commentOpen: Array.from(commentOpen),
       student,
+      numYears,
       timestamp: new Date().toISOString()
     };
     localStorage.setItem('mijnStudieplan', JSON.stringify(data));
@@ -168,6 +171,8 @@ export default function Home() {
             setAchieved={setAchieved}
             commentOpen={commentOpen}
             setCommentOpen={setCommentOpen}
+            numYears={numYears}
+            setNumYears={setNumYears}
           />
         )}
       </main>
@@ -190,6 +195,7 @@ export default function Home() {
         curriculum={curriculum}
         planGrid={planGrid}
         achieved={achieved}
+        numYears={numYears}
       />
       <Toaster position="bottom-right" />
     </div>
