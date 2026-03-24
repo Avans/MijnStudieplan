@@ -40,7 +40,7 @@ export default function Home() {
 
   useEffect(() => {
     // Check local storage for resumed app state on mount
-    const saved = localStorage.getItem('mijnStudiepad');
+    const saved = localStorage.getItem('mijnStudieplan');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -130,7 +130,7 @@ export default function Home() {
       student,
       timestamp: new Date().toISOString()
     };
-    localStorage.setItem('mijnStudiepad', JSON.stringify(data));
+    localStorage.setItem('mijnStudieplan', JSON.stringify(data));
     toast.success('Studieplan opgeslagen! (Lokaal)');
   };
 
@@ -151,7 +151,7 @@ export default function Home() {
             savedTimestamp={savedData?.timestamp}
             onResume={resumeCurriculum}
             onClear={() => {
-              localStorage.removeItem('mijnStudiepad');
+              localStorage.removeItem('mijnStudieplan');
               setSavedData(null);
             }}
           />

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mijn Studiepad",
+  title: "Mijn Studieplan",
   description: "Een tool om je persoonlijk studieplan samen te stellen.",
 };
 
