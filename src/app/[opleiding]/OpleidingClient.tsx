@@ -115,8 +115,7 @@ export default function OpleidingClient({ opleiding, displayName, jsonUrl }: Opl
     return (
         <div className="min-h-screen bg-bg-app flex flex-col print:bg-white text-text-main">
             <Header
-                backLabel={view === 'uitleg' ? '← Over het studieadviesproces' : `← Uitleg ${displayName}`}
-                backHref={view === 'uitleg' ? '/' : undefined}
+                backLabel={view === 'plan' ? `← Uitleg ${displayName}` : undefined}
                 onBack={view === 'plan' ? () => setView('uitleg') : undefined}
                 showActions={view === 'plan'}
                 onSave={handleSave}
