@@ -172,18 +172,20 @@ export default function Step2({
                 </div>
             </div>
 
-            <div className="bg-card border border-border-subtle rounded-radius p-4 mb-6 shadow-sm">
-                <div className="flex items-center gap-4 flex-wrap">
-                    <label className="font-semibold text-[0.95rem]">Studiepad:</label>
-                    <select
-                        className="flex-1 max-w-[320px] bg-bg-app border border-border-subtle rounded-md px-3 py-2 text-[0.95rem] outline-none focus:border-primary focus:ring-2 focus:ring-primary-light transition-all"
-                        value={selectedPad}
-                        onChange={handlePadChange}
-                    >
-                        {pads.map(p => <option key={p} value={p}>{p}</option>)}
-                    </select>
+            {pads.length > 1 && (
+                <div className="bg-card border border-border-subtle rounded-radius p-4 mb-6 shadow-sm">
+                    <div className="flex items-center gap-4 flex-wrap">
+                        <label className="font-semibold text-[0.95rem]">Studiepad:</label>
+                        <select
+                            className="flex-1 max-w-[320px] bg-bg-app border border-border-subtle rounded-md px-3 py-2 text-[0.95rem] outline-none focus:border-primary focus:ring-2 focus:ring-primary-light transition-all"
+                            value={selectedPad}
+                            onChange={handlePadChange}
+                        >
+                            {pads.map(p => <option key={p} value={p}>{p}</option>)}
+                        </select>
+                    </div>
                 </div>
-            </div>
+            )}
 
             <div className="overflow-x-auto pb-4">
                 <div className="grid grid-cols-[56px_repeat(4,minmax(160px,1fr))] gap-2 min-w-[700px]">
