@@ -1,203 +1,38 @@
-'use client';
-
-import { parseJSON, distributeItemsByStudiepad } from '@/lib/utils';
-import { Toaster, toast } from 'react-hot-toast';
-
-import { useState, useEffect } from 'react';
-import Header from '@/components/Header';
-import Step1 from '@/components/Step1';
-import Step2 from '@/components/Step2';
-import { CurriculumData, StudentInfo, PlanGrid } from '@/lib/types';
-import PrintModal from '@/components/PrintModal';
-import PrintView from '@/components/PrintView';
+import Link from 'next/link';
 
 export default function Home() {
-  const [step, setStep] = useState<1 | 2>(1);
-  const [opleidingUrl, setOpleidingUrl] = useState<string | null>(null);
-  const [curriculum, setCurriculum] = useState<CurriculumData | null>(null);
-  const [selectedPad, setSelectedPad] = useState<string>('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+    return (
+        <div className="min-h-screen bg-bg-app text-text-main">
+            <header className="bg-card border-b border-border-subtle p-3.5 px-6 sticky top-0 z-50 shadow-sm">
+                <div className="max-w-[1140px] mx-auto">
+                    <h1 className="text-xl font-bold text-primary">Mijn Studieplan</h1>
+                </div>
+            </header>
 
-  // S.student
-  const [student, setStudent] = useState<StudentInfo>({
-    name: '',
-    number: '',
-    coach: '',
-    date: new Date().toISOString().split('T')[0],
-  });
+            <main className="w-full max-w-[1140px] mx-auto px-6 py-10 space-y-8">
+                {/* TODO Feature 2: volledige ATD-uitleg hier */}
+                <div>
+                    <h2 className="text-2xl font-bold mb-2">Over het studieadviesproces</h2>
+                    <p className="text-muted text-sm">Hier komt uitleg over het ATD-studieadviesproces en hoe dit hulpmiddel daarin past.</p>
+                </div>
 
-  // S.plan and S.achieved
-  const [planGrid, setPlanGrid] = useState<PlanGrid>({});
-  const [achieved, setAchieved] = useState<Set<string>>(new Set());
-  const [numYears, setNumYears] = useState<number>(4);
-
-  // S.commentOpen
-  const [commentOpen, setCommentOpen] = useState<Set<string>>(new Set());
-
-  // Modals
-  const [isPrintModalOpen, setIsPrintModalOpen] = useState(false);
-  const [savedData, setSavedData] = useState<any>(null);
-
-  useEffect(() => {
-    // Check local storage for resumed app state on mount
-    const saved = localStorage.getItem('mijnStudieplan');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        if (parsed.timestamp && parsed.opleidingUrl) {
-          setSavedData(parsed);
-        }
-      } catch (e) {
-        // console.error(e)
-      }
-    }
-  }, []);
-
-  const resumeCurriculum = async () => {
-    if (!savedData) return;
-    setLoading(true);
-    setError('');
-    try {
-      const res = await fetch(savedData.opleidingUrl);
-      if (!res.ok) throw new Error('Kon JSON niet laden');
-      const rawData = await res.json();
-
-      const parsedModules = parseJSON(rawData);
-      const data: CurriculumData = {
-        studiepaden: rawData.studiepaden || {},
-        modules: parsedModules
-      };
-
-      setCurriculum(data);
-      setOpleidingUrl(savedData.opleidingUrl);
-      setSelectedPad(savedData.selectedPad || '');
-      setPlanGrid(savedData.planGrid || {});
-      setAchieved(new Set(savedData.achieved || []));
-      setCommentOpen(new Set(savedData.commentOpen || []));
-      if (savedData.numYears) setNumYears(savedData.numYears);
-      if (savedData.student) setStudent(savedData.student);
-
-      setStep(2);
-      toast.success('Studieplan hervat!');
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const loadCurriculum = async (url: string) => {
-    setLoading(true);
-    setError('');
-    try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('Kon JSON niet laden');
-      const rawData = await res.json();
-
-      const parsedModules = parseJSON(rawData);
-      const data: CurriculumData = {
-        studiepaden: rawData.studiepaden || {},
-        modules: parsedModules
-      };
-
-      setCurriculum(data);
-      setOpleidingUrl(url);
-
-      const pads = Object.keys(data.studiepaden);
-      if (pads.length > 0) {
-        setSelectedPad(pads[0]);
-        // Default grid using utility
-        const initialGrid = distributeItemsByStudiepad(data.modules, data.studiepaden[pads[0]]);
-        setPlanGrid(initialGrid);
-      } else {
-        setError('De opleiding heeft geen studiepaden ingevuld.');
-      }
-      setStep(2);
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-
-  const handleSave = () => {
-    const data = {
-      opleidingUrl,
-      selectedPad,
-      planGrid,
-      achieved: Array.from(achieved),
-      commentOpen: Array.from(commentOpen),
-      student,
-      numYears,
-      timestamp: new Date().toISOString()
-    };
-    localStorage.setItem('mijnStudieplan', JSON.stringify(data));
-    toast.success('Studieplan opgeslagen! (Lokaal)');
-  };
-
-  return (
-    <div className="min-h-screen bg-bg-app flex flex-col print:bg-white text-text-main">
-      <Header
-        step={step}
-        onSave={handleSave}
-        onPrint={() => setIsPrintModalOpen(true)}
-      />
-      <main className="flex-1 w-full max-w-[1140px] mx-auto px-6 py-7 print:hidden">
-        {error && <div className="text-red-700 bg-red-50 border border-red-200 p-4 rounded-radius mb-6">{error}</div>}
-
-        {step === 1 && (
-          <Step1
-            onSelectOpleiding={loadCurriculum}
-            loading={loading}
-            savedTimestamp={savedData?.timestamp}
-            onResume={resumeCurriculum}
-            onClear={() => {
-              localStorage.removeItem('mijnStudieplan');
-              setSavedData(null);
-            }}
-          />
-        )}
-
-        {step === 2 && curriculum && (
-          <Step2
-            curriculum={curriculum}
-            selectedPad={selectedPad}
-            setSelectedPad={setSelectedPad}
-            planGrid={planGrid}
-            setPlanGrid={setPlanGrid}
-            achieved={achieved}
-            setAchieved={setAchieved}
-            commentOpen={commentOpen}
-            setCommentOpen={setCommentOpen}
-            numYears={numYears}
-            setNumYears={setNumYears}
-          />
-        )}
-      </main>
-
-      {isPrintModalOpen && step === 2 && (
-        <PrintModal
-          student={student}
-          setStudent={setStudent}
-          onClose={() => setIsPrintModalOpen(false)}
-          onConfirm={() => {
-            setIsPrintModalOpen(false);
-            setTimeout(() => window.print(), 100);
-          }}
-        />
-      )}
-
-      <PrintView
-        step={step}
-        student={student}
-        curriculum={curriculum}
-        planGrid={planGrid}
-        achieved={achieved}
-        numYears={numYears}
-      />
-      <Toaster position="bottom-right" />
-    </div>
-  );
+                <div className="flex gap-5 flex-wrap">
+                    <Link
+                        href="/ict"
+                        className="flex-1 min-w-[200px] max-w-[280px] bg-card border-2 border-border-subtle rounded-xl p-7 text-center flex flex-col items-center gap-3 hover:border-primary hover:-translate-y-1 hover:shadow-md transition-all duration-200"
+                    >
+                        <div className="text-4xl">💻</div>
+                        <div className="font-semibold text-base">ICT — Informatica</div>
+                    </Link>
+                    <Link
+                        href="/cmd"
+                        className="flex-1 min-w-[200px] max-w-[280px] bg-card border-2 border-border-subtle rounded-xl p-7 text-center flex flex-col items-center gap-3 hover:border-primary hover:-translate-y-1 hover:shadow-md transition-all duration-200"
+                    >
+                        <div className="text-4xl">🎨</div>
+                        <div className="font-semibold text-base">CMD — Communication & Multimedia Design</div>
+                    </Link>
+                </div>
+            </main>
+        </div>
+    );
 }

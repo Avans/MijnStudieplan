@@ -1,12 +1,39 @@
-export default function Header({ step, onSave, onPrint }: { step: number, onSave: () => void, onPrint: () => void }) {
+import Link from 'next/link';
+
+interface HeaderProps {
+    backLabel?: string;
+    backHref?: string;
+    onBack?: () => void;
+    showActions?: boolean;
+    onSave?: () => void;
+    onPrint?: () => void;
+}
+
+export default function Header({ backLabel, backHref, onBack, showActions, onSave, onPrint }: HeaderProps) {
     return (
         <header className="bg-card border-b border-border-subtle p-3.5 px-6 sticky top-0 z-50 shadow-sm print:hidden">
             <div className="max-w-[1140px] mx-auto flex items-center justify-between gap-6 flex-wrap">
-                <div className="flex items-center gap-6 flex-wrap">
+                <div className="flex items-center gap-4 flex-wrap">
+                    {backLabel && backHref && (
+                        <Link
+                            href={backHref}
+                            className="text-[0.85rem] font-medium text-primary hover:underline whitespace-nowrap"
+                        >
+                            {backLabel}
+                        </Link>
+                    )}
+                    {backLabel && onBack && (
+                        <button
+                            onClick={onBack}
+                            className="text-[0.85rem] font-medium text-primary hover:underline whitespace-nowrap bg-transparent border-none cursor-pointer p-0"
+                        >
+                            {backLabel}
+                        </button>
+                    )}
                     <h1 className="text-xl font-bold text-primary whitespace-nowrap">Mijn Studieplan</h1>
                 </div>
 
-                {step === 2 && (
+                {showActions && (
                     <div className="flex gap-2.5 items-center">
                         <button
                             onClick={onSave}
