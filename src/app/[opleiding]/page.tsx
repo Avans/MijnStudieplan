@@ -1,14 +1,17 @@
 import { notFound } from 'next/navigation';
 import OpleidingClient from './OpleidingClient';
 
+// Respect the basePath that next.config.ts sets for GitHub Pages deployments.
+const BASE_PATH = process.env.GITHUB_PAGES === 'true' ? '/MijnStudieplan' : '';
+
 const OPLEIDING_MAP: Record<string, { displayName: string; jsonUrl: string }> = {
     ict: {
         displayName: 'ICT — Informatica',
-        jsonUrl: '/leeruitkomsten/Leeruitkomsten-ICT.json',
+        jsonUrl: `${BASE_PATH}/leeruitkomsten/Leeruitkomsten-ICT.json`,
     },
     cmd: {
         displayName: 'CMD — Communication & Multimedia Design',
-        jsonUrl: '/leeruitkomsten/Leeruitkomsten-CMD.json',
+        jsonUrl: `${BASE_PATH}/leeruitkomsten/Leeruitkomsten-CMD.json`,
     },
 };
 
