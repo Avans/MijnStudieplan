@@ -26,6 +26,8 @@ export default function Step2({
     const [draggedItem, setDraggedItem] = useState<{ code: string, idx: number, fromKey: string } | null>(null);
     const [infoModalItem, setInfoModalItem] = useState<{ code: string, activeIdx?: number } | null>(null);
     const [pendingPad, setPendingPad] = useState<string | null>(null);
+    const [commentDialog, setCommentDialog] = useState<{ key: string; year: number; period: number } | null>(null);
+    const [draftComment, setDraftComment] = useState<string>('');
 
     const pads = Object.keys(curriculum.studiepaden);
 
@@ -119,13 +121,10 @@ export default function Step2({
         setDraggedItem(null);
     };
 
-    const toggleComment = (key: string) => {
-        setCommentOpen(prev => {
-            const next = new Set(prev);
-            if (next.has(key)) next.delete(key);
-            else next.add(key);
-            return next;
-        });
+    const toggleComment = (key: string, year: number, period: number) => {
+        const cell = planGrid[key];
+        setDraftComment(cell?.comment || '');
+        setCommentDialog({ key, year, period });
     };
 
     const toggleAchieved = (code: string, idx: number) => {
@@ -162,7 +161,7 @@ export default function Step2({
         <div className="animate-fade-in">
             <div className="flex flex-wrap gap-5 justify-between mb-5 items-start">
                 <div>
-                    <h2 className="text-2xl font-bold mb-1">Studieplan</h2>
+                    <h2 className="text-2xl font-bold mb-1">{curriculum.naamOpleiding || 'Studieplan'}</h2>
                     <p className="text-sm text-muted">Vink behaalde leeruitkomsten aan. Sleep een leeruitkomst naar een andere periode.</p>
                 </div>
                 <div className="min-w-[210px]">
@@ -197,7 +196,7 @@ export default function Step2({
                             {[1, 2, 3, 4].map(p => {
                                 const key = `${y}_${p}`;
                                 const cell = planGrid[key];
-                                const hasComment = commentOpen.has(key) || !!cell?.comment;
+                                const hasComment = !!cell?.comment;
 
                                 let cellEC = 0;
                                 cell?.items.forEach(i => {
@@ -220,12 +219,18 @@ export default function Step2({
                                                 title={cellEC > 15 ? `Let op: ${cellEC} EC is meer dan 15 EC in één periode` : undefined}
                                             >{cellEC} EC{cellEC > 15 ? ' ⚠' : ''}</span>
                                             <button
-                                                onClick={() => toggleComment(key)}
-                                                className={`w-[22px] h-[22px] border rounded flex items-center justify-center text-[0.78rem] transition-colors
-                          ${hasComment ? 'bg-yellow-100 border-yellow-300 text-yellow-800' : 'bg-transparent border-border-subtle text-muted hover:bg-bg-app hover:border-primary hover:text-primary'}
-                        `}
+                                                onClick={() => toggleComment(key, y, p)}
+                                                title={cell?.comment ? `Opmerking: ${cell.comment}` : 'Opmerking toevoegen'}
+                                                className={`w-[26px] h-[26px] flex items-center justify-center rounded transition-colors ${
+                                                    cell?.comment
+                                                        ? 'text-accent hover:text-accent-dark'
+                                                        : 'text-muted hover:text-primary'
+                                                }`}
                                             >
-                                                {hasComment ? '💬' : '+'}
+                                                {/* Speech bubble SVG */}
+                                                <svg viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px]">
+                                                    <path fillRule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v7a2 2 0 01-2 2H6l-4 4V5z" clipRule="evenodd" />
+                                                </svg>
                                             </button>
                                         </div>
 
@@ -282,19 +287,7 @@ export default function Step2({
                                             })}
                                         </div>
 
-                                        {commentOpen.has(key) && (
-                                            <textarea
-                                                className="w-full border border-yellow-400 bg-yellow-50 rounded p-1.5 text-[0.75rem] outline-none mt-1 resize-y min-h-[50px] text-text-main"
-                                                placeholder={`Opmerking voor Jaar ${y}, Periode ${p}...`}
-                                                value={cell.comment || ''}
-                                                onChange={(e) => {
-                                                    setPlanGrid(prev => ({
-                                                        ...prev,
-                                                        [key]: { ...prev[key], comment: e.target.value }
-                                                    }));
-                                                }}
-                                            />
-                                        )}
+
                                     </div>
                                 );
                             })}
@@ -357,6 +350,59 @@ export default function Step2({
                             >
                                 Ja, overschrijven
                             </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Comment dialog */}
+            {commentDialog && (
+                <div className="fixed inset-0 bg-black/50 z-[100] flex justify-center items-center p-4" onClick={() => setCommentDialog(null)}>
+                    <div className="bg-card rounded-radius shadow-xl w-full max-w-[480px] overflow-hidden animate-fade-in" onClick={e => e.stopPropagation()}>
+                        <div className="flex items-center gap-3 border-b border-border-subtle px-5 py-4">
+                            <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-accent shrink-0">
+                                <path fillRule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v7a2 2 0 01-2 2H6l-4 4V5z" clipRule="evenodd" />
+                            </svg>
+                            <h3 className="text-[1.05rem] font-bold text-text-main m-0">
+                                Opmerking — Jaar {commentDialog.year}, Periode {commentDialog.period}
+                            </h3>
+                        </div>
+                        <div className="p-5">
+                            <textarea
+                                autoFocus
+                                className="w-full border border-border-subtle rounded-radius p-3 text-[0.9rem] outline-none focus:border-primary focus:ring-2 focus:ring-primary-light transition-all resize-y min-h-[100px] text-text-main bg-bg-app"
+                                placeholder={`Notitie voor Jaar ${commentDialog.year}, Periode ${commentDialog.period}...`}
+                                value={draftComment}
+                                onChange={e => setDraftComment(e.target.value)}
+                            />
+                        </div>
+                        <div className="flex justify-between items-center border-t border-border-subtle px-5 py-3 gap-3">
+                            <button
+                                onClick={() => {
+                                    setPlanGrid(prev => ({ ...prev, [commentDialog.key]: { ...prev[commentDialog.key], comment: '' } }));
+                                    setCommentDialog(null);
+                                }}
+                                className="text-[0.85rem] text-muted hover:text-red-500 transition-colors cursor-pointer bg-transparent border-none p-0"
+                            >
+                                Verwijderen
+                            </button>
+                            <div className="flex gap-2">
+                                <button
+                                    onClick={() => setCommentDialog(null)}
+                                    className="px-4 py-1.5 text-[0.9rem] border border-border-subtle rounded bg-card text-text-main hover:bg-bg-app transition-colors cursor-pointer"
+                                >
+                                    Annuleren
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        setPlanGrid(prev => ({ ...prev, [commentDialog.key]: { ...prev[commentDialog.key], comment: draftComment } }));
+                                        setCommentDialog(null);
+                                    }}
+                                    className="px-4 py-1.5 text-[0.9rem] border-none rounded bg-success text-white hover:bg-success-dark transition-colors cursor-pointer"
+                                >
+                                    Opslaan
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

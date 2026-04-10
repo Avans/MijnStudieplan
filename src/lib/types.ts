@@ -25,6 +25,7 @@ export interface Module {
 }
 
 export interface CurriculumData {
+    naamOpleiding?: string;
     studiepaden: Record<string, string[]>;
     modules: Module[];
 }

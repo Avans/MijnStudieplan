@@ -61,6 +61,7 @@ export default function OpleidingClient({ opleiding, displayName, jsonUrl }: Opl
 
             const parsedModules = parseJSON(rawData);
             const data: CurriculumData = {
+                naamOpleiding: rawData.naamOpleiding,
                 studiepaden: rawData.studiepaden || {},
                 modules: parsedModules,
             };
