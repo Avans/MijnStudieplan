@@ -201,10 +201,24 @@ export default function Step2({
                                 const hasComment = !!cell?.comment;
 
                                 let cellEC = 0;
+                                // Multi-period items (code contains '-') span 2 periods; count half their EC here
                                 cell?.items.forEach(i => {
                                     const m = curriculum.modules.find(x => x.code === i.code);
-                                    cellEC += m?.outcomes?.[i.idx]?.studiepunten || 0;
+                                    const ec = m?.outcomes?.[i.idx]?.studiepunten || 0;
+                                    const span = i.code.includes('-') ? 2 : 1;
+                                    cellEC += ec / span;
                                 });
+                                // Add the other half of multi-period items from the previous period that span into this one
+                                if (p > 1) {
+                                    const prevCell = planGrid[`${y}_${p - 1}`];
+                                    prevCell?.items.forEach(i => {
+                                        if (i.code.includes('-')) {
+                                            const m = curriculum.modules.find(x => x.code === i.code);
+                                            const ec = m?.outcomes?.[i.idx]?.studiepunten || 0;
+                                            cellEC += ec / 2;
+                                        }
+                                    });
+                                }
 
                                 const isDragTarget = draggedItem && draggedItem.fromKey !== key;
                                 const dragOffered = isDragTarget ? isOfferedInPeriod(draggedItem!.code, p) : null;
@@ -248,6 +262,25 @@ export default function Step2({
                                             onDrop={(e) => onDrop(e, key)}
                                         >
                                             {(!cell?.items || cell.items.length === 0) && <span className="absolute bottom-1 w-full text-center text-[0.72rem] text-muted opacity-50 pointer-events-none">Leeg</span>}
+                                            {/* Ghost spacers for multi-period items from previous cell that visually overlap this one */}
+                                            {p > 1 && (planGrid[`${y}_${p - 1}`]?.items || []).filter(i => i.code.includes('-')).map(spanItem => {
+                                                const sm = curriculum.modules.find(x => x.code === spanItem.code);
+                                                const sout = sm?.outcomes?.[spanItem.idx];
+                                                if (!sout) return null;
+                                                return (
+                                                    <div
+                                                        key={`ghost-${spanItem.code}-${spanItem.idx}`}
+                                                        aria-hidden="true"
+                                                        className="opacity-0 pointer-events-none select-none flex items-center gap-1.5 p-1.5 border border-transparent rounded shrink-0 w-full"
+                                                    >
+                                                        <div className="flex-[1] min-w-0">
+                                                            <span className="text-[0.62rem]">{spanItem.code}</span>
+                                                            <span className="block text-[0.78rem] leading-tight">{sout.name}</span>
+                                                        </div>
+                                                        {sout.studiepunten > 0 && <span className="text-[0.68rem]">{sout.studiepunten}</span>}
+                                                    </div>
+                                                );
+                                            })}
                                             {cell?.items.map((item, idx) => {
                                                 const m = curriculum.modules.find(x => x.code === item.code);
                                                 const out = m?.outcomes?.[item.idx];

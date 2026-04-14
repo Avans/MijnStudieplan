@@ -53,9 +53,9 @@ export function distributeItemsByStudiepad(modules: any[], padArray: string[]) {
             return;
         }
 
-        // Round-robin assignment of outcomes based on their order and the assigned periods
+        // All outcomes go in the first period; multi-period modules visually span to the next
         mod.outcomes.forEach((_: any, i: number) => {
-            const key = modKeys[i % modKeys.length];
+            const key = modKeys[0];
             if (grid[key]) grid[key].items.push({ code: mod.code, idx: i });
         });
     });
