@@ -269,6 +269,21 @@
       ]
     },
     {
+      "code": "2.3",
+      "naam": "Keuzemodule",
+      "periodes": [
+        3
+      ],
+      "leeruitkomsten": [
+        {
+          "titel": "Keuzeruimte",
+          "studiepunten": 15,
+          "omschrijving": "Deze wordt gevuld door de opleiding waar je de keuzemodule volgt.",
+          "toetsonderdelen": []
+        }
+      ]
+    },
+    {
       "code": "2.4",
       "naam": "Overtuig",
       "periodes": [
@@ -354,6 +369,37 @@
               "vorm": "Beoordelingsportfolio"
             }
           ]
+        }
+      ]
+    },
+    {
+      "code": "3.4",
+      "naam": "Keuzemodule",
+      "periodes": [
+        4
+      ],
+      "leeruitkomsten": [
+        {
+          "titel": "Keuzeruimte",
+          "studiepunten": 15,
+          "omschrijving": "Deze wordt gevuld door de opleiding waar je de keuzemodule volgt.",
+          "toetsonderdelen": []
+        }
+      ]
+    },
+    {
+      "code": "4.1-4.2",
+      "naam": "Minor",
+      "periodes": [
+        1,
+        2
+      ],
+      "leeruitkomsten": [
+        {
+          "titel": "Minor",
+          "studiepunten": 30,
+          "omschrijving": "Deze wordt gevuld door de opleiding waar je de minor volgt.",
+          "toetsonderdelen": []
         }
       ]
     },
