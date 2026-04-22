@@ -425,60 +425,6 @@
           ]
         }
       ]
-    },
-    {
-      "code": "2.3",
-      "naam": "Keuzemodule NLQF5",
-      "periodes": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "leeruitkomsten": [
-        {
-          "titel": "Keuzemodule",
-          "studiepunten": 15,
-          "omschrijving": "",
-          "toetsonderdelen": []
-        }
-      ]
-    },
-    {
-      "code": "3.4",
-      "naam": "Keuzemodule NLQF6",
-      "periodes": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "leeruitkomsten": [
-        {
-          "titel": "Keuzemodule",
-          "studiepunten": 15,
-          "omschrijving": "",
-          "toetsonderdelen": []
-        }
-      ]
-    },
-    {
-      "code": "4.1-4.2",
-      "naam": "Minor",
-      "periodes": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "leeruitkomsten": [
-        {
-          "titel": "Keuzemodule",
-          "studiepunten": 30,
-          "omschrijving": "",
-          "toetsonderdelen": []
-        }
-      ]
     }
   ]
 }
