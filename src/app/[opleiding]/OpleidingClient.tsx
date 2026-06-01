@@ -282,67 +282,119 @@ function UitlegScherm({ savedData, loading, onStart, onResume, onNewStart }: Uit
                 )}
 
                 {/* Sectie 1: Het studieadvies */}
-                <div className="space-y-4">
-                    <h2 className="text-2xl font-bold">Het studieadvies</h2>
-                    <p className="text-[0.97rem] leading-relaxed text-text-main">
-                        Aan het einde van je eerste jaar geeft Avans je een studieadvies. Dat advies is geen eindoordeel, maar een signaal: hoe staat het er voor, en wat is een realistisch vervolg? Avans onderscheidt drie soorten adviezen.
-                    </p>
+                <div className="space-y-8">
+
+                    {/* Intro */}
                     <div className="space-y-3">
-                        <div className="flex gap-3 items-start">
-                            <span className="mt-[6px] shrink-0 w-3 h-3 rounded-full bg-emerald-500"></span>
-                            <p className="text-[0.97rem] leading-relaxed text-text-main">
-                                <strong>Positief</strong> — Je hebt 45 EC of meer behaald. Je stroomt normaal door naar jaar 2.
-                            </p>
+                        <h2 className="text-2xl font-bold">Studieadvies en doorstroomnorm</h2>
+                        <p className="text-[0.97rem] leading-relaxed text-text-main font-semibold">
+                            Als eerstejaarsstudent krijg je vóór het einde van het studiejaar een studieadvies van de examencommissie.
+                        </p>
+                        <p className="text-[0.97rem] leading-relaxed text-text-main font-semibold">
+                            Dit advies is niet bindend, maar geeft je inzicht in hoe je ervoor staat.
+                        </p>
+                        <div className="space-y-1">
+                            <p className="text-[0.97rem] leading-relaxed text-text-main font-semibold">Er wordt gekeken naar:</p>
+                            <ul className="list-disc list-inside space-y-1 pl-1">
+                                <li className="text-[0.97rem] leading-relaxed text-text-main font-semibold">Je studieresultaten</li>
+                                <li className="text-[0.97rem] leading-relaxed text-text-main font-semibold">Je motivatie</li>
+                                <li className="text-[0.97rem] leading-relaxed text-text-main font-semibold">Je persoonlijke situatie*</li>
+                                <li className="text-[0.97rem] leading-relaxed text-text-main font-semibold">Je potentie om de opleiding succesvol af te ronden</li>
+                            </ul>
                         </div>
-                        <div className="flex gap-3 items-start">
-                            <span className="mt-[6px] shrink-0 w-3 h-3 rounded-full bg-yellow-400"></span>
-                            <p className="text-[0.97rem] leading-relaxed text-text-main">
-                                <strong>Advies passend studietraject</strong> — Je hebt minder dan 45 EC behaald, maar er is vertrouwen dat je de opleiding succesvol kunt afronden. Je kunt jaar 1 overdoen, of je vraagt de examencommissie om toestemming om toch (een deel van) jaar 2 te volgen. Daarvoor heb je een goedgekeurd studieplan nodig.
-                            </p>
+                        <p className="text-[0.93rem] leading-relaxed text-muted italic">
+                            *Meld veranderingen in je persoonlijke situatie tijdig bij{' '}
+                            <a href="https://avans.sharepoint.com/sites/student-support-studentbegeleiding/SitePages/Studentendecaan.aspx" target="_blank" rel="noopener noreferrer" className="underline hover:text-text-main transition-colors">
+                                Student Support, de studentendecaan
+                            </a>{' '}
+                            zodat jij de ondersteuning krijgt die nodig is.
+                        </p>
+                    </div>
+
+                    {/* Mag ik naar het 2e jaar? */}
+                    <div className="grid grid-cols-3 gap-6">
+                        <div>
+                            <h3 className="text-xl font-semibold text-primary">Mag ik naar het 2e jaar?</h3>
                         </div>
-                        <div className="flex gap-3 items-start">
-                            <span className="mt-[6px] shrink-0 w-3 h-3 rounded-full bg-red-400"></span>
+                        <div className="col-span-2 space-y-4">
                             <p className="text-[0.97rem] leading-relaxed text-text-main">
-                                <strong>Verwijsadvies</strong> — Je hebt minder dan 45 EC behaald en er is onvoldoende vertrouwen dat de opleiding bij jou past. Doorstromen naar jaar 2 is in principe niet mogelijk. Je slb&apos;er begeleidt je richting Student Support of een andere studiekeuze. In uitzonderlijke gevallen kan de examencommissie toch toestemming verlenen, maar ook dan is een studieplan vereist.
+                                Om door te gaan naar het tweede jaar gelden twee normen:
+                            </p>
+                            <ol className="list-decimal list-inside space-y-3 pl-1">
+                                <li className="text-[0.97rem] leading-relaxed text-text-main">
+                                    <strong>Kwantitatieve norm</strong><br />
+                                    <span className="pl-5 block">Je moet minimaal 45 studiepunten hebben gehaald in het eerste jaar.</span>
+                                </li>
+                                <li className="text-[0.97rem] leading-relaxed text-text-main">
+                                    <strong>Kwalitatieve norm</strong><br />
+                                    <span className="pl-5 block">Sommige opleidingen stellen extra eisen. Bijvoorbeeld dat je bepaalde onderdelen hebt gehaald die belangrijk zijn voor je vervolg, zoals leeruitkomsten die nodig zijn voor een stage of voor het beroep waarvoor je wordt opgeleid.</span>
+                                </li>
+                            </ol>
+                            <p className="text-[0.97rem] leading-relaxed text-text-main">
+                                Wil je weten of jouw opleiding extra eisen heeft?<br />
+                                Kijk in het{' '}
+                                <a href="https://www.avans.nl/studeren/praktische-zaken/onderwijs-en-examenregelingen-2024-2025" target="_blank" rel="noopener noreferrer" className="font-semibold underline hover:opacity-80 transition-opacity">
+                                    Onderwijs- en Examenreglement (OER)
+                                </a>{' '}
+                                van jouw opleiding.
                             </p>
                         </div>
                     </div>
-                </div>
 
-                {/* Sectie 2: Het studieplan */}
-                <div className="space-y-3">
-                    <h2 className="text-2xl font-bold">Het studieplan</h2>
-                    <p className="text-[0.97rem] leading-relaxed text-text-main">
-                        Bij een <strong>advies passend studietraject</strong> of <strong>verwijsadvies</strong> stel je een studieplan op. Dit plan is <em>van en voor jou</em>: jij bent zelf verantwoordelijk voor het opstellen, bijhouden en indienen ervan. Het is geen eenmalig formulier, maar een levend document dat je elke periode bijwerkt in overleg met je studieloopbaanbegeleider (slb&apos;er).
-                    </p>
-                    <p className="text-[0.97rem] leading-relaxed text-text-main">
-                        In het studieplan leg je vast welke leeruitkomsten je wanneer wilt behalen, in welke volgorde, en hoe realistisch dat is gezien je persoonlijke situatie. Je slb&apos;er kijkt met je mee: kloppen de combinaties van modules, is de werkdruk haalbaar, en houd je rekening met de aanbieding van modules per periode? Uiteindelijk beslist de examencommissie of je op basis van dit plan door mag naar jaar 2.
-                    </p>
-                    <p className="text-[0.97rem] leading-relaxed text-text-main">
-                        Heb je toestemming gekregen? Dan legt de slb&apos;er zijn goedkeuring vast in Osiris, zodat de examencommissie dit kan inzien.
-                    </p>
-                </div>
-
-                {/* Sectie 3: Tijdlijn */}
-                <div className="space-y-3">
-                    <h2 className="text-2xl font-bold">Wanneer en hoe?</h2>
-                    <p className="text-[0.97rem] leading-relaxed text-text-main">
-                        Het proces rondom het studieadvies loopt over het hele eerste jaar, met vaste contactmomenten:
-                    </p>
-                    <div className="border-l-2 border-primary-light pl-5 space-y-4">
+                    {/* Wanneer hoor ik er iets over? */}
+                    <div className="grid grid-cols-3 gap-6">
                         <div>
-                            <p className="font-semibold text-[0.97rem]">Periode 2</p>
-                            <p className="text-[0.93rem] text-muted leading-relaxed">Je slb&apos;er bespreekt je studievoortgang in een individueel gesprek. Op basis van de resultaten uit periode 1 ontvang je vóór 1 februari een eerste studiesignaal én een officiële brief van de examencommissie. Als je al een studieplan hebt, bespreek je de haalbaarheid ervan.</p>
+                            <h3 className="text-xl font-semibold text-primary">Wanneer hoor ik er iets over?</h3>
                         </div>
-                        <div>
-                            <p className="font-semibold text-[0.97rem]">Periode 3</p>
-                            <p className="text-[0.93rem] text-muted leading-relaxed">Het proces van de studieadviezen wordt toegelicht aan alle studenten. Je slb&apos;er bespreekt dit in het groepsgesprek en in het individuele gesprek.</p>
-                        </div>
-                        <div>
-                            <p className="font-semibold text-[0.97rem]">Periode 4, week 10–11</p>
-                            <p className="text-[0.93rem] text-muted leading-relaxed">De definitieve cijfers komen binnen. Op maandag van week 11 stemmen slb&apos;ers en de examencommissie de adviezen op elkaar af. Op dinsdag bespreek je samen met je slb&apos;er het definitieve studieplan, keurt de slb&apos;er het goed en dien je het in bij de examencommissie. Vrijdag van week 11 neemt de examencommissie een besluit.</p>
+                        <div className="col-span-2 space-y-3">
+                            <p className="text-[0.97rem] leading-relaxed text-text-main">
+                                In elke onderwijsperiode heb je minimaal één gesprek met je studieloopbaanbegeleider (SLB&apos;er/coach) over hoe je studie verloopt.
+                            </p>
+                            <p className="text-[1.05rem] leading-relaxed text-text-main">
+                                In januari krijg je ook bericht van de examencommissie over je studievoortgang.<br />
+                                Wil je namelijk stoppen met je studie, dan is het slim om dit voor 1 februari te doen.<br />
+                                Dat heet de{' '}
+                                <a href="https://duo.nl/particulier/opleiding-stoppen-of-wijzigen/stoppen-in-je-eerste-jaar.jsp" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80 transition-opacity">
+                                    eerstejaarsregeling
+                                </a>
+                                . Je hoeft dan je prestatiebeurs niet terug te betalen.
+                            </p>
+                            <p className="text-[0.97rem] leading-relaxed text-text-main">
+                                <strong>Mis je studiepunten?</strong><br />
+                                Dan maak je samen met je SLB&apos;er een studieplan om achterstanden in te halen.<br />
+                                Dit plan helpt je om overzicht te houden en afspraken te maken over vervolgstappen in je studie.
+                            </p>
                         </div>
                     </div>
+
+                    {/* Uitkomsten van het studieadvies */}
+                    <div className="grid grid-cols-3 gap-6">
+                        <div>
+                            <h3 className="text-xl font-semibold text-primary">Uitkomsten van het studieadvies</h3>
+                        </div>
+                        <div className="col-span-2 space-y-2">
+                            <p className="text-[0.97rem] leading-relaxed text-text-main">
+                                Aan het einde van je eerste studiejaar krijg je een <strong>persoonlijk studieadvies.</strong><br />
+                                Er zijn drie mogelijke uitkomsten:
+                            </p>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-3 gap-4">
+                        <div className="border border-border-subtle rounded-lg p-4 space-y-2">
+                            <h2 className="text-lg font-bold text-text-main">Positief studieadvies</h2>
+                            <p className="text-[0.93rem] leading-relaxed text-text-main">Je kunt zonder problemen doorgaan naar het tweede jaar.</p>
+                        </div>
+                        <div className="border border-border-subtle rounded-lg p-4 space-y-2">
+                            <h2 className="text-lg font-bold text-text-main">Advies passend studietraject</h2>
+                            <p className="text-[0.93rem] leading-relaxed text-text-main">Je kunt doorgaan, maar er zijn aandachtspunten. Samen met je SLB&apos;er bespreek je wat nodig is om succesvol verder te studeren.</p>
+                        </div>
+                        <div className="border border-border-subtle rounded-lg p-4 space-y-2">
+                            <h2 className="text-lg font-bold text-text-main">Verwijsadvies</h2>
+                            <p className="text-[0.93rem] leading-relaxed text-text-main">De opleiding adviseert je om een andere studie te overwegen. Je SLB&apos;er helpt je hierbij en verwijst je naar <strong>Student Support</strong> voor extra begeleiding.</p>
+                        </div>
+                    </div>
+
+
                 </div>
 
                 {/* Sectie 4: Hoe gebruik je dit hulpmiddel */}
