@@ -1,0 +1,339 @@
+{
+  "naamOpleiding": "B Communication & Multimedia Design Breda",
+  "studiepaden": {
+    "Regulier": [
+      "1.1", "1.2", "1.3", "1.4",
+      "2.1", "2.2", "2.3", "2.4",
+      "3.1-3.2", "3.1-3.2", "3.3-3.4", "3.3-3.4",
+      "4.1-4.2", "4.1-4.2", "4.3-4.4", "4.3-4.4"
+    ]
+  },
+  "modules": [
+    {
+      "code": "1.1",
+      "naam": "Periode 1",
+      "moduleCode": "M00733-02",
+      "periodes": [1],
+      "leeruitkomsten": [
+        {
+          "titel": "Creative Technology 1",
+          "studiepunten": 4,
+          "omschrijving": "Je realiseert een reeks van technisch functionerende prototypes waarin de interactie tussen hardware, software en externe data centraal staat. Je komt tot dit resultaat door het technisch implementeren van Tinkering (Arduino), Coding, Digital Tools en Physical Tools. Je hanteert hierbij een hands-on 'tinkering'-aanpak: je leert door te doen en bent in staat om deze technologieën zelfstandig te configureren, te programmeren en werkend te krijgen (debuggen) tot een samenhangend systeem.",
+          "toetsonderdelen": [
+            {
+              "titel": "Portfolio beoordeling Creative Technology 1",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        },
+        {
+          "titel": "Media Design 1",
+          "studiepunten": 4,
+          "omschrijving": "Je realiseert een reeks visuele experimenten waarin de basisprincipes van esthetiek, beeldtaal, hiërarchie en narratief centraal staan. Je komt tot deze resultaten door deze principes toe te passen en de uitkomsten te duiden aan de hand van de bijbehorende theorie.",
+          "toetsonderdelen": [
+            {
+              "titel": "Media Design 1",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        },
+        {
+          "titel": "Ontwerpcollectief 1",
+          "studiepunten": 7,
+          "omschrijving": "Je beantwoordt met een ontworpen interactieve, betekenisvolle ervaring een ontwerpvraagstuk binnen een gegeven context. Je neemt met je ontwerp kritisch stelling ten aanzien van het vraagstuk, belanghebbenden en de context waarin het vraagstuk speelt. Je experimenteert om tot relevante inzichten, perspectieven en ontwerprichtingen te komen en maakt op basis hiervan een overtuigend beleefbaar, gemedialiseerd ontwerp dat je evalueert met betrokkenen (maken). Je neemt actief regie over je ontwerpproces, je toont een kritische blik op je eigen rol en werk en verhoud je daarbij tot bestaande ontwerpdisciplines en ethische kaders (professioneel handelen).",
+          "toetsonderdelen": [
+            {
+              "titel": "Criteriumgericht interview Ontwerpcollectief 1",
+              "vorm": "Criteriumgericht interview"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "1.2",
+      "naam": "Periode 2",
+      "moduleCode": "M25192-02",
+      "periodes": [2],
+      "leeruitkomsten": [
+        {
+          "titel": "Ontwerpcollectief 2",
+          "studiepunten": 7,
+          "omschrijving": "Je beantwoordt met een ontworpen interactieve, betekenisvolle ervaring een ontwerpvraagstuk binnen een gegeven context. Je neemt met je ontwerp kritisch stelling ten aanzien van het vraagstuk, belanghebbenden en de context waarin het vraagstuk speelt. Je experimenteert om tot relevante inzichten, perspectieven en ontwerprichtingen te komen en maakt op basis hiervan een overtuigend beleefbaar, gemedialiseerd ontwerp dat je evalueert met betrokkenen (maken). Je neemt actief regie over je ontwerpproces, je toont een kritische blik op je eigen rol en werk en verhoud je daarbij tot bestaande ontwerpdisciplines en ethische kaders (professioneel handelen).",
+          "toetsonderdelen": [
+            {
+              "titel": "Criteriumgericht interview Ontwerpcollectief 2",
+              "vorm": "Criteriumgericht interview"
+            }
+          ]
+        },
+        {
+          "titel": "Social Design 1",
+          "studiepunten": 4,
+          "omschrijving": "Je kunt menselijk gedrag in de sociale omgeving onderzoeken, genereert daarbij human insights, en verklaart deze vanuit basiskennis psychologie. Je kunt hieruit een relevante eigen ontwerpvraag (framing) formuleren.",
+          "toetsonderdelen": [
+            {
+              "titel": "Portfolio beoordeling Social Design 1",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        },
+        {
+          "titel": "User Experience Design 1",
+          "studiepunten": 4,
+          "omschrijving": "Je hebt basiskennis van interactie, affordances en interface design en past deze kennis toe om interactie tussen mens en een fysieke of digitale applicatie mogelijk te maken. Je onderbouwt gemaakte keuzes met relevante bronnen.",
+          "toetsonderdelen": [
+            {
+              "titel": "Portfolio beoordeling User Experience Design 1",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "1.3",
+      "naam": "Periode 3",
+      "moduleCode": "M61203-02",
+      "periodes": [3],
+      "leeruitkomsten": [
+        {
+          "titel": "Discursive Design 1",
+          "studiepunten": 4,
+          "omschrijving": "Je hebt basiskennis van en basisvaardigheid in deconstructie, reframing en onconventionele media en zet deze in om een ander perspectief te introduceren. Je onderbouwt gemaakte keuzes met relevante bronnen.",
+          "toetsonderdelen": [
+            {
+              "titel": "Discursive Design 1",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        },
+        {
+          "titel": "Ontwerpcollectief 3",
+          "studiepunten": 7,
+          "omschrijving": "Je beantwoordt met een ontworpen interactieve, betekenisvolle ervaring een ontwerpvraagstuk binnen een gegeven context. Je neemt met je ontwerp kritisch stelling ten aanzien van het vraagstuk, belanghebbenden en de context waarin het vraagstuk speelt. Je experimenteert om tot relevante inzichten, perspectieven en ontwerprichtingen te komen en maakt op basis hiervan een overtuigend beleefbaar, gemedialiseerd ontwerp dat je evalueert met betrokkenen (maken). Je neemt actief regie over je ontwerpproces, je toont een kritische blik op je eigen rol en werk en verhoud je daarbij tot bestaande ontwerpdisciplines en ethische kaders (professioneel handelen).",
+          "toetsonderdelen": [
+            {
+              "titel": "Criteriumgericht interview Ontwerpcollectief 3",
+              "vorm": "Criteriumgericht interview"
+            }
+          ]
+        },
+        {
+          "titel": "Spatial & Sensorial Design 1",
+          "studiepunten": 4,
+          "omschrijving": "Je begrijpt de werking van het zintuigelijke gebied van de mens in wisselwerking met diens omgeving en situatie. Je zet basiskennis van somaesthetic design, zintuigen en materialen in om sensorische stimuli te laten ervaren. Je onderbouwt gemaakte keuzes met relevante bronnen.",
+          "toetsonderdelen": [
+            {
+              "titel": "Portfolio beoordeling Spatial & Sensorial Design 1",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "1.4",
+      "naam": "Periode 4",
+      "moduleCode": "M09581-02",
+      "periodes": [4],
+      "leeruitkomsten": [
+        {
+          "titel": "Creative Technology 2",
+          "studiepunten": 4,
+          "omschrijving": "Je realiseert een reeks van technisch functionerende prototypes waarin de interactie tussen hardware, software en externe data centraal staat. Je komt tot dit resultaat door het technisch implementeren van Tinkering (Arduino), Spatial Coding (Unity), real-time data (API) en Artificial Intelligence (AI). Je hanteert hierbij een hands-on 'tinkering'-aanpak: je leert door te doen en bent in staat om deze technologieën zelfstandig te configureren, te programmeren en werkend te krijgen (debuggen) tot een samenhangend systeem.",
+          "toetsonderdelen": [
+            {
+              "titel": "Creative Technology 2",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        },
+        {
+          "titel": "Media Design 2",
+          "studiepunten": 4,
+          "omschrijving": "Je realiseert een reeks mediaproducten waarin een abstract(e) thema/kernwaarde visueel wordt vertaald en gecommuniceerd naar een kijker. Theorie uit de kernonderwerpen esthetiek, beeldtaal, hiërarchie en narratief uit zowel MD1 als MD2 wordt ingezet bij het maken van ontwerpkeuzes.",
+          "toetsonderdelen": [
+            {
+              "titel": "Media Design 2",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        },
+        {
+          "titel": "Ontwerpcollectief 4",
+          "studiepunten": 7,
+          "omschrijving": "Je beantwoordt met een ontworpen interactieve, betekenisvolle ervaring een ontwerpvraagstuk binnen een gegeven context. Je neemt met je ontwerp kritisch stelling ten aanzien van het vraagstuk, belanghebbenden en de context waarin het vraagstuk speelt. Je experimenteert om tot relevante inzichten, perspectieven en ontwerprichtingen te komen en maakt op basis hiervan een overtuigend beleefbaar, gemedialiseerd ontwerp dat je evalueert met betrokkenen (maken). Je neemt actief regie over je ontwerpproces, je toont een kritische blik op je eigen rol en werk en verhoud je daarbij tot bestaande ontwerpdisciplines en ethische kaders (professioneel handelen).",
+          "toetsonderdelen": [
+            {
+              "titel": "Criteriumgericht interview Ontwerpcollectief 4",
+              "vorm": "Criteriumgericht interview"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2.1",
+      "naam": "Periode 5",
+      "moduleCode": "M25880-01",
+      "periodes": [1],
+      "leeruitkomsten": [
+        {
+          "titel": "Ontwerpcollectief 5",
+          "studiepunten": 7,
+          "omschrijving": "Je beantwoordt met een ontworpen interactieve, betekenisvolle ervaring een ontwerpvraagstuk binnen een gegeven context. Je neemt met je ontwerp kritisch stelling ten aanzien van het vraagstuk, belanghebbenden en de context waarin het vraagstuk speelt. Je experimenteert om tot relevante inzichten, perspectieven en ontwerprichtingen te komen en maakt op basis hiervan een overtuigend beleefbaar, gemedialiseerd ontwerp dat je evalueert met betrokkenen (maken). Je neemt actief regie over je ontwerpproces, je toont een kritische blik op je eigen rol en werk en verhoud je daarbij tot bestaande ontwerpdisciplines en ethische kaders (professioneel handelen).",
+          "toetsonderdelen": [
+            {
+              "titel": "Criteriumgericht interview Ontwerpcollectief 5",
+              "vorm": "Criteriumgericht interview"
+            }
+          ]
+        },
+        {
+          "titel": "Social Design 2",
+          "studiepunten": 4,
+          "omschrijving": "Je voert (etnografisch en) ontwerpend onderzoek uit in de stedelijke omgeving en ontwerpt in co-creatie een interventie die bijdraagt aan een gewenste/mogelijke transitie. Dit doe je op basis van (sensorisch) etnografisch onderzoek in de fysieke en sociaal-maatschappelijke stedelijke omgeving. Je positioneert je hierbij kritisch vanuit een zelfgekozen sociaal-maatschappelijk vraagstuk en basisbegrip van sociologie.",
+          "toetsonderdelen": [
+            {
+              "titel": "Portfolio beoordeling Social Design 2",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        },
+        {
+          "titel": "User Experience Design 2",
+          "studiepunten": 4,
+          "omschrijving": "Je hebt basiskennis van informatie-architectuur en gebruikerscontext, en past deze kennis toe om interactie tussen mens en een fysieke of digitale applicatie mogelijk en betekenisvol te maken. Je onderbouwt daarbij gemaakte keuzes met relevante bronnen en verkregen inzichten. Tevens kun je een gebruikersonderzoek opzetten, uitvoeren en de uitkomsten analyseren.",
+          "toetsonderdelen": [
+            {
+              "titel": "User Experience Design 2",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2.2",
+      "naam": "Periode 6",
+      "moduleCode": "M26476-01",
+      "periodes": [2],
+      "leeruitkomsten": [
+        {
+          "titel": "Discursive Design 2",
+          "studiepunten": 4,
+          "omschrijving": "Je hebt basiskennis van en basisvaardigheid in discours analyse, worlding, en media innovatie en zet deze in om een ander perspectief te introduceren. Je onderbouwt gemaakte keuzes met relevante bronnen.",
+          "toetsonderdelen": [
+            {
+              "titel": "Discursive Design 2",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        },
+        {
+          "titel": "Ontwerpcollectief 6",
+          "studiepunten": 7,
+          "omschrijving": "Je beantwoordt met een ontworpen interactieve, betekenisvolle ervaring een ontwerpvraagstuk binnen een gegeven context. Je neemt met je ontwerp kritisch stelling ten aanzien van het vraagstuk, belanghebbenden en de context waarin het vraagstuk speelt. Je experimenteert om tot relevante inzichten, perspectieven en ontwerprichtingen te komen en maakt op basis hiervan een overtuigend beleefbaar, gemedialiseerd ontwerp dat je evalueert met betrokkenen (maken). Je neemt actief regie over je ontwerpproces, je toont een kritische blik op je eigen rol en werk en verhoud je daarbij tot bestaande ontwerpdisciplines en ethische kaders (professioneel handelen).",
+          "toetsonderdelen": [
+            {
+              "titel": "Criteriumgericht interview Ontwerpcollectief 6",
+              "vorm": "Criteriumgericht interview"
+            }
+          ]
+        },
+        {
+          "titel": "Spatial & Sensorial Design 2",
+          "studiepunten": 4,
+          "omschrijving": "Je begrijpt de interactie tussen de zintuigen van de mens in wisselwerking met diens omgeving en situatie. Je zet kennis van sensory enhancement, multisensory interaction en lived experience in om interactie betekenisvol en memorabel te maken. Je onderbouwt gemaakte keuzes met relevante bronnen en een eigen rationale.",
+          "toetsonderdelen": [
+            {
+              "titel": "Portfolio beoordeling Spatial & Sensorial Design 2",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2.3",
+      "naam": "Keuzeruimte",
+      "periodes": [3],
+      "leeruitkomsten": []
+    },
+    {
+      "code": "2.4",
+      "naam": "Keuzeruimte",
+      "periodes": [4],
+      "leeruitkomsten": []
+    },
+    {
+      "code": "3.1-3.2",
+      "naam": "Stage",
+      "moduleCode": "M09483-01",
+      "periodes": [1, 2],
+      "leeruitkomsten": [
+        {
+          "titel": "Stage",
+          "studiepunten": 30,
+          "omschrijving": "Volgt.",
+          "toetsonderdelen": [
+            {
+              "titel": "Portfolio beoordeling Stage",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "3.3-3.4",
+      "naam": "Verdieping",
+      "moduleCode": "M63050-01",
+      "periodes": [3, 4],
+      "leeruitkomsten": [
+        {
+          "titel": "Verdieping Collectief",
+          "studiepunten": 14,
+          "omschrijving": "Je ontwerpt een interactieve, betekenisvolle ervaring als antwoord op een ontwerpvraagstuk. Je neemt met je ontwerp kritisch stelling ten aanzien van het vraagstuk, belanghebbenden en de context waarin het vraagstuk speelt. Je experimenteert om tot relevante inzichten, perspectieven en ontwerprichtingen te komen en maakt op basis hiervan een overtuigend beleefbaar, gemedialiseerd ontwerp dat je evalueert met betrokkenen. Je neemt actief regie over je ontwerpproces, je toont een kritische blik op je eigen rol en werk en verhoud je daarbij tot bestaande ontwerpdisciplines en ethische kaders.",
+          "toetsonderdelen": []
+        },
+        {
+          "titel": "Verdieping Discipline 1",
+          "studiepunten": 8,
+          "omschrijving": "",
+          "toetsonderdelen": [
+            {
+              "titel": "test 1",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        },
+        {
+          "titel": "Verdieping Discipline 2",
+          "studiepunten": 8,
+          "omschrijving": "",
+          "toetsonderdelen": [
+            {
+              "titel": "test 2",
+              "vorm": "Beoordelings-portfolio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "4.1-4.2",
+      "naam": "Keuzeruimte",
+      "periodes": [1, 2],
+      "leeruitkomsten": []
+    },
+    {
+      "code": "4.3-4.4",
+      "naam": "Afstuderen",
+      "moduleCode": "M31604-01",
+      "periodes": [3, 4],
+      "leeruitkomsten": []
+    }
+  ]
+}

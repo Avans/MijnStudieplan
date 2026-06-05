@@ -11,6 +11,10 @@ const OPLEIDING_MAP: Record<string, { displayName: string; jsonUrl: string }> = 
         displayName: 'CMD — Communication & Multimedia Design',
         jsonUrl: `${BASE_PATH}/leeruitkomsten/Leeruitkomsten-CMD.json`,
     },
+    'cmd-b': {
+        displayName: 'CMD-B — Communication & Multimedia Design Breda',
+        jsonUrl: `${BASE_PATH}/leeruitkomsten/leeruitkomsten-CMD-B.json`,
+    },
     com: {
         displayName: 'COM — Communicatie',
         jsonUrl: `${BASE_PATH}/leeruitkomsten/Leeruitkomsten-COM.json`,
