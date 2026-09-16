@@ -23,6 +23,10 @@ const OPLEIDING_MAP: Record<string, { displayName: string; jsonUrl: string }> = 
         displayName: 'WTB — Werktuigbouwkunde',
         jsonUrl: `${BASE_PATH}/leeruitkomsten/Leeruitkomsten-WTB.json`,
     },
+    'binno-h': {
+        displayName: 'BINNO-H — Business Innovation',
+        jsonUrl: `${BASE_PATH}/leeruitkomsten/leeruitkomsten-BINNO-H.json`,
+    },
 };
 
 export function generateStaticParams() {
