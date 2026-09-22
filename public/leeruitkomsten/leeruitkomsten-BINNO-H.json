@@ -1,22 +1,47 @@
 {
   "naamOpleiding": "B Business Innovation",
   "studiepaden": {
-    "Regulier": ["1.1", "1.2", "1.3", "1.4", "2.1", "2.2", "2.3", "2.4", "3.1-3.2", "3.3", "3.4", "4.1-4.2", "4.3-4.4"]
+    "Regulier": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "3.1-3.2",
+      "3.1-3.2",
+      "3.3",
+      "3.4",
+      "4.1-4.2",
+      "4.1-4.2",
+      "4.3-4.4",
+      "4.3-4.4"
+    ]
   },
   "modules": [
     {
       "code": "1.1",
       "naam": "P1 Innovatie de basis",
       "moduleCode": "M44693-02",
-      "periodes": [1],
+      "periodes": [
+        1
+      ],
       "leeruitkomsten": [
         {
           "titel": "Id-Coaching",
           "studiepunten": 3,
           "omschrijving": "De student laat zien zich te kunnen aanpassen aan de leeromgeving van het hbo door zelfstandig studiegedrag te ontwikkelen, effectief samen te werken en te reflecteren op eigen leerproces en groepsrol.",
           "toetsonderdelen": [
-            { "titel": "SLB", "vorm": "Schriftelijke opdracht" },
-            { "titel": "Vaardigheden samenwerken in teams", "vorm": "Beroepshandeling (met live observatie)" }
+            {
+              "titel": "SLB",
+              "vorm": "Schriftelijke opdracht"
+            },
+            {
+              "titel": "Vaardigheden samenwerken in teams",
+              "vorm": "Beroepshandeling (met live observatie)"
+            }
           ]
         },
         {
@@ -24,8 +49,14 @@
           "studiepunten": 9,
           "omschrijving": "Als business innovator weet je hoe je tot verantwoordelijke innovaties kan komen. Met jouw basisinzicht in organisaties en veranderingen in de omgeving van een organisatie spot je mogelijkheden om te innoveren. Daarbij kan je kiezen voor een passende innovatiemethode waarmee je in staat bent een gestructureerd innovatieproces te doorlopen. Je weet vervolgens aan de hand van innovatietypen en tactics verschillende kansrichtingen te benoemen. Tijdens het innoveren weet je hoe je rekening moet houden met de sociale en ecologische impact van een innovatie. Daarnaast kan je de financiele impact in een eenvoudige businesscase weergeven. Tot slot weet je hoe je een belangrijke stakeholder kan overtuigen van jouw innovatie.",
           "toetsonderdelen": [
-            { "titel": "Innovatie - portfoliobeoordeling", "vorm": "Beoordelings-portfolio" },
-            { "titel": "Inzichttoets Innovatietheorie", "vorm": "Geroosterde schriftelijke inzichttoets" }
+            {
+              "titel": "Innovatie - portfoliobeoordeling",
+              "vorm": "Beoordelings-portfolio"
+            },
+            {
+              "titel": "Inzichttoets Innovatietheorie",
+              "vorm": "Geroosterde schriftelijke inzichttoets"
+            }
           ]
         },
         {
@@ -33,8 +64,14 @@
           "studiepunten": 3,
           "omschrijving": "Je kan voor een opdrachtgever met voorgestructureerde en begeleide opdrachten het gehele innovatieproces in korte tijd doorlopen. Je kan hierbij inzichten en kansen creeëren, verrassende concepten bedenken en in grote lijnen aangeven hoe deze te implementeren. Hierdoor heb je inzicht in welke kennis, houding en vaardigheden je voor innovatie nodig hebt.",
           "toetsonderdelen": [
-            { "titel": "Presentatie Innovatieproject P1", "vorm": "Presentatie" },
-            { "titel": "Verantwoording Innovatieproject P1", "vorm": "Mondelinge toets" }
+            {
+              "titel": "Presentatie Innovatieproject P1",
+              "vorm": "Presentatie"
+            },
+            {
+              "titel": "Verantwoording Innovatieproject P1",
+              "vorm": "Mondelinge toets"
+            }
           ]
         }
       ]
@@ -43,15 +80,23 @@
       "code": "1.2",
       "naam": "P2 Design voor Innovatie",
       "moduleCode": "M44120-02",
-      "periodes": [2],
+      "periodes": [
+        2
+      ],
       "leeruitkomsten": [
         {
           "titel": "Designvaardigheden",
           "studiepunten": 9,
           "omschrijving": "Als business innovator kun je als creatief waardevolle concepten ontwikkelen in het innovatieproces. Je kunt ideeën genereren, combineren en selecteren om tot kansrijke en originele concepten te komen; je kunt ideeën/concepten verbeelden in schetsen, visualisaties en prototypes om het creatieve proces te bevorderen en om concepten te testen ter verbetering; en je kunt je ideeën en concepten overtuigend presenteren aan betrokken stakeholders.",
           "toetsonderdelen": [
-            { "titel": "Designportfolio incl. individuele challenge", "vorm": "Beoordelings-portfolio" },
-            { "titel": "Inzichttoets Basisprincipes van Design", "vorm": "Geroosterde schriftelijke inzichttoets" }
+            {
+              "titel": "Designportfolio incl. individuele challenge",
+              "vorm": "Beoordelings-portfolio"
+            },
+            {
+              "titel": "Inzichttoets Basisprincipes van Design",
+              "vorm": "Geroosterde schriftelijke inzichttoets"
+            }
           ]
         },
         {
@@ -59,8 +104,14 @@
           "studiepunten": 2,
           "omschrijving": "De student toont inzicht in het beroep en opleidingsprofiel van Business Innovation en weet wat de daarbij passende professionele houdingsaspecten zijn. En is in staat zich op een professionele manier te presenteren aan mede-studenten.",
           "toetsonderdelen": [
-            { "titel": "SLB", "vorm": "Schriftelijke opdracht" },
-            { "titel": "Vaardigheden Presenteren", "vorm": "Beroepshandeling (met live observatie)" }
+            {
+              "titel": "SLB",
+              "vorm": "Schriftelijke opdracht"
+            },
+            {
+              "titel": "Vaardigheden Presenteren",
+              "vorm": "Beroepshandeling (met live observatie)"
+            }
           ]
         },
         {
@@ -68,8 +119,14 @@
           "studiepunten": 4,
           "omschrijving": "Je kan voor een opdrachtgever met voorgestructureerde en begeleide opdrachten en de geleerde methoden en technieken een nieuw levensvatbaar innovatie-ontwerp ontwikkelen dat meervoudige waarde oplevert. Je kunt daarbij een realisatieplan ontwikkelen dat het aannemelijk maakt dat de gebruikers het concept gaan gebruiken. Je kan je innovatie-ontwerp op overtuigende wijze presenteren aan de opdrachtgever.",
           "toetsonderdelen": [
-            { "titel": "Presentatie Innovatieproject P2", "vorm": "Presentatie" },
-            { "titel": "Verantwoording Innovatieproject P2", "vorm": "Mondelinge toets" }
+            {
+              "titel": "Presentatie Innovatieproject P2",
+              "vorm": "Presentatie"
+            },
+            {
+              "titel": "Verantwoording Innovatieproject P2",
+              "vorm": "Mondelinge toets"
+            }
           ]
         }
       ]
@@ -78,15 +135,23 @@
       "code": "1.3",
       "naam": "P3 Onderzoek voor Innovatie",
       "moduleCode": "M05385-02",
-      "periodes": [3],
+      "periodes": [
+        3
+      ],
       "leeruitkomsten": [
         {
           "titel": "Id-coaching",
           "studiepunten": 2,
           "omschrijving": "De student pioniert aan de hand van een praktijkgerichte opdracht met nieuwe situaties op te zoeken, actief deel te nemen en te experimenteren, en gebruikt deze ervaringen om het eigen begrip van de rol van Business Innovator en de eigen professionele richting te verdiepen. En kan hierover een gesprek aangaan in een internationale context.",
           "toetsonderdelen": [
-            { "titel": "SLB", "vorm": "Schriftelijke opdracht" },
-            { "titel": "Vaardigheden Engels gesprek", "vorm": "Mondelinge toets" }
+            {
+              "titel": "SLB",
+              "vorm": "Schriftelijke opdracht"
+            },
+            {
+              "titel": "Vaardigheden Engels gesprek",
+              "vorm": "Mondelinge toets"
+            }
           ]
         },
         {
@@ -94,8 +159,14 @@
           "studiepunten": 4,
           "omschrijving": "Je kan met voorgestructureerde en begeleide opdrachten een probleem in kaart brengen voor een opdrachtgever. Je kan op basis van de geleerde onderzoekstheorie en -methoden de bestaande situatie en de gewenste situatie schetsen. Hierbij kan je aantrekkelijke innovatiekansrichtingen en een definitieve innovatieopdracht formuleren. De kansrichtingen hebben de potentie om bij te dragen aan de verduurzaming van de opdrachtgever/de branche. Je kan je visie en de definitieve innovatieopdracht op overtuigende wijze presenteren aan de opdrachtgever.",
           "toetsonderdelen": [
-            { "titel": "Presentatie Innovatieproject P3", "vorm": "Presentatie" },
-            { "titel": "Verantwoording Innovatieproject P3", "vorm": "Mondelinge toets" }
+            {
+              "titel": "Presentatie Innovatieproject P3",
+              "vorm": "Presentatie"
+            },
+            {
+              "titel": "Verantwoording Innovatieproject P3",
+              "vorm": "Mondelinge toets"
+            }
           ]
         },
         {
@@ -103,8 +174,14 @@
           "studiepunten": 9,
           "omschrijving": "Als business innovator heb je inzicht in het belang van onderzoek en ben je in staat een vooronderzoek en een probleemanalyse op te zetten en over te brengen. Hiervoor gebruik je relevante vragen, methodes en een gestructureerde aanpak. Je bent in staat onderbouwde keuzes te maken over het onderzoek en kan in je argumentatie hiervoor basisbegrippen van onderzoek te gebruiken. Je kunt de kracht van AI inzetten voor onderzoek en je weet ook dat het werken met AI risico's met zich meebrengt, en dat je daarom kritisch moet zijn. Je hebt geleerd te letten op aannames en vanuit nieuwsgierigheid door te vragen om tot nieuwe inzichten te komen. Je kunt de kennis uit onderzoek voor innovatie toepassen in de praktijk.",
           "toetsonderdelen": [
-            { "titel": "Tentamencasus", "vorm": "Beoordelings-portfolio" },
-            { "titel": "Schriftelijke toets basisprincipes van onderzoek", "vorm": "Geroosterde schriftelijke inzichttoets" }
+            {
+              "titel": "Tentamencasus",
+              "vorm": "Beoordelings-portfolio"
+            },
+            {
+              "titel": "Schriftelijke toets basisprincipes van onderzoek",
+              "vorm": "Geroosterde schriftelijke inzichttoets"
+            }
           ]
         }
       ]
@@ -113,16 +190,27 @@
       "code": "1.4",
       "naam": "P4 Verkenning van de innovatiewereld",
       "moduleCode": "M43216-02",
-      "periodes": [4],
+      "periodes": [
+        4
+      ],
       "leeruitkomsten": [
         {
           "titel": "Creatief en kritisch denken",
           "studiepunten": 6,
           "omschrijving": "Je kan creativiteit(stechnieken), faciliteervaardigheden en (het model van) kritisch denken inzetten om op een open en onderzoekende manier tot vernieuwende en onderbouwde concepten te komen. Dit kan je doen bij een zelfstandig proces en ook bij het faciliteren van een groep met een gemeenschappelijk proces.",
           "toetsonderdelen": [
-            { "titel": "Praktijkervaring", "vorm": "Beoordelings-portfolio" },
-            { "titel": "Faciliteervaardigheden", "vorm": "Beoordelings-portfolio" },
-            { "titel": "Reflectie opdracht op locatie", "vorm": "Geroosterde schriftelijke inzichttoets" }
+            {
+              "titel": "Praktijkervaring",
+              "vorm": "Beoordelings-portfolio"
+            },
+            {
+              "titel": "Faciliteervaardigheden",
+              "vorm": "Beoordelings-portfolio"
+            },
+            {
+              "titel": "Reflectie opdracht op locatie",
+              "vorm": "Geroosterde schriftelijke inzichttoets"
+            }
           ]
         },
         {
@@ -130,8 +218,14 @@
           "studiepunten": 2,
           "omschrijving": "De student stuurt doelgericht de eigen ontwikkeling binnen de rol van Business Innovator door een passende praktijkopdracht te kiezen en uit te voeren, en presenteert op overtuigende wijze hoe opgedane ervaringen hebben bijgedragen aan de eigen professionele groei en is daarnaast in staat om dit ook in een internationale context te presenteren.",
           "toetsonderdelen": [
-            { "titel": "SLB", "vorm": "Presentatie" },
-            { "titel": "Vaardigheden Engels mondelinge pitch", "vorm": "Presentatie" }
+            {
+              "titel": "SLB",
+              "vorm": "Presentatie"
+            },
+            {
+              "titel": "Vaardigheden Engels mondelinge pitch",
+              "vorm": "Presentatie"
+            }
           ]
         },
         {
@@ -139,25 +233,39 @@
           "studiepunten": 7,
           "omschrijving": "Als Business Innovator kan je onderzoek doen in binnen- en buitenland naar een innovatiethema in de praktijk. Je neemt initiatief om onderzoek te doen in de praktijk. Je kan op basis van de gevonden informatie inzichten formuleren met betrekking tot het thema. Daarnaast kan je relevante ontwikkelingen en uitdagingen benoemen. Je kan de resultaten en de conclusies van het onderzoek én een reflectie daarop op originele wijze overbrengen in een workshop die je zelf hebt georganiseerd, gepromoot en gefaciliteerd.",
           "toetsonderdelen": [
-            { "titel": "Onderzoeksplan", "vorm": "Schriftelijke opdracht" },
-            { "titel": "Procesbeschrijving en conclusies uit het onderzoek", "vorm": "Schriftelijke opdracht" },
-            { "titel": "Workshop Project P4", "vorm": "Beroepshandeling (met live observatie)" }
+            {
+              "titel": "Onderzoeksplan",
+              "vorm": "Schriftelijke opdracht"
+            },
+            {
+              "titel": "Procesbeschrijving en conclusies uit het onderzoek",
+              "vorm": "Schriftelijke opdracht"
+            },
+            {
+              "titel": "Workshop Project P4",
+              "vorm": "Beroepshandeling (met live observatie)"
+            }
           ]
         }
       ]
     },
     {
       "code": "2.1",
-      "naam": "K1 Innovation Driven Enterprises explore",
+      "naam": "K1: Innovation Driven Enterprises Explore | Public Challenges Explore | Responsible Startups Explore",
       "moduleCode": "M49425-02",
-      "periodes": [1],
+      "periodes": [
+        1
+      ],
       "leeruitkomsten": [
         {
           "titel": "K1 Business Cases",
           "studiepunten": 4,
           "omschrijving": "Als Business Innovator kan je de toegevoegde waarde van een innovatie concreet maken door de financiele, ecologische en sociale impact te kwantificeren en kosten en investeringen in beeld te brengen. Dit kan je voor verschillende contexten en voor meerdere type innovaties. Op basis hiervan kan je een advies uitbrengen over de financiele realisatie van de innovatie",
           "toetsonderdelen": [
-            { "titel": "K1 Business Cases", "vorm": "Mondelinge toets" }
+            {
+              "titel": "K1 Business Cases",
+              "vorm": "Mondelinge toets"
+            }
           ]
         },
         {
@@ -165,8 +273,14 @@
           "studiepunten": 2,
           "omschrijving": "De student kiest onderbouwd een praktijkopdracht om gericht te werken aan een persoonlijk houdingsaspect, toont eigenaarschap in het leerproces en past daarnaast Agile/SCRUM-methodieken toe bij het plannen, uitvoeren en bijsturen van een eenvoudig innovatieproject.",
           "toetsonderdelen": [
-            { "titel": "K1 SLB", "vorm": "Schriftelijke opdracht" },
-            { "titel": "K1 ID-Coaching vaardigheden", "vorm": "Beroepshandeling (met live observatie)" }
+            {
+              "titel": "K1 SLB",
+              "vorm": "Schriftelijke opdracht"
+            },
+            {
+              "titel": "K1 ID-Coaching vaardigheden",
+              "vorm": "Beroepshandeling (met live observatie)"
+            }
           ]
         },
         {
@@ -174,95 +288,43 @@
           "studiepunten": 9,
           "omschrijving": "Als business innovator kun je volgens de laatste inzichten op het gebied van innovatie, onderzoek en design acteren binnen de complexe omgeving van een grote organisatie. Je kunt je via gedegen ontworpen onderzoek verdiepen in de doelgroep, markt en context van de opdrachtgever. Je kunt op basis van een analyse van de gevonden informatie aantonen dat je een relevant probleem hebt gevonden dat door de opdrachtgever kan worden opgelost.",
           "toetsonderdelen": [
-            { "titel": "Showcase presentatie en eindgesprek", "vorm": "Mondelinge toets" },
-            { "titel": "Verantwoording innovatie en proces", "vorm": "Verantwoordingsverslag" },
-            { "titel": "Presentatie concept aan opdrachtgever", "vorm": "Presentatie" }
-          ]
-        }
-      ]
-    },
-    {
-      "code": "2.1",
-      "naam": "K1 Public Challenges explore",
-      "moduleCode": "M76848-02",
-      "periodes": [1],
-      "leeruitkomsten": [
-        {
-          "titel": "K1 Business Cases",
-          "studiepunten": 4,
-          "omschrijving": "Als Business Innovator kan je de toegevoegde waarde van een innovatie concreet maken door de financiële, ecologische en sociale impact te kwantificeren en kosten en investeringen in beeld te brengen. Dit kan je voor verschillende contexten en voor meerdere type innovaties. Op basis hiervan kan je een advies uitbrengen over de financiële realisatie van de innovatie.",
-          "toetsonderdelen": [
-            { "titel": "K1 Businesscases", "vorm": "Mondelinge toets" }
-          ]
-        },
-        {
-          "titel": "K1 ID Coaching",
-          "studiepunten": 2,
-          "omschrijving": "De student kiest onderbouwd een praktijkopdracht om gericht te werken aan een persoonlijk houdingsaspect, toont eigenaarschap in het leerproces en past daarnaast Agile/SCRUM-methodieken toe bij het plannen, uitvoeren en bijsturen van een eenvoudig innovatieproject.",
-          "toetsonderdelen": [
-            { "titel": "K1 SLB", "vorm": "Schriftelijke opdracht" },
-            { "titel": "K1 ID Coaching Vaardigheden", "vorm": "Beroepshandeling (met live observatie)" }
-          ]
-        },
-        {
-          "titel": "K1 Public Challenges Project",
-          "studiepunten": 9,
-          "omschrijving": "Als business innovator kun je volgens de laatste inzichten op het gebied van innovatie, onderzoek en design acteren in de context van het publieke domein. Je kan in deze context de basisbeginselen van Social Design toepassen: Door het doen van empathisch onderzoek ben je in staat om een maatschappelijk vraagstuk vanuit meerdere perspectieven uit het complexe stakeholdersveld grondig te begrijpen.",
-          "toetsonderdelen": [
-            { "titel": "K1 Public Challenges Project", "vorm": "Beoordelings-portfolio" },
-            { "titel": "K1 Public Challenges Project", "vorm": "Geroosterde schriftelijke inzichttoets" }
-          ]
-        }
-      ]
-    },
-    {
-      "code": "2.1",
-      "naam": "K1 Responsible Startups Explore",
-      "moduleCode": "M89293-02",
-      "periodes": [1],
-      "leeruitkomsten": [
-        {
-          "titel": "K1 Business Cases",
-          "studiepunten": 4,
-          "omschrijving": "Als business Innovator kan je de toegevoegde waarde van een innovatie concreet maken door de financiële, ecologische en sociale impact te kwantificeren en kosten en investeringen in beeld te brengen. Dit kan je voor verschillende contexten en voor meerdere typen innovatie doen. Op basis hiervan kan je een advies uitbrengen over de financiële realisatie van de innovatie.",
-          "toetsonderdelen": [
-            { "titel": "K1 Business cases", "vorm": "Mondelinge toets" }
-          ]
-        },
-        {
-          "titel": "K1 ID-Coaching",
-          "studiepunten": 2,
-          "omschrijving": "De student kiest onderbouwd een praktijkopdracht om gericht te werken aan een persoonlijk houdingsaspect, toont eigenaarschap in het leerproces en past daarnaast Agile/SCRUM-methodieken toe bij het plannen, uitvoeren en bijsturen van een eenvoudig innovatieproject.",
-          "toetsonderdelen": [
-            { "titel": "K1 SLB", "vorm": "Beoordelings-portfolio" },
-            { "titel": "K1 ID Coaching Vaardigheden", "vorm": "Beroepshandeling (met live observatie)" }
-          ]
-        },
-        {
-          "titel": "K1 Responsible Startups Project",
-          "studiepunten": 9,
-          "omschrijving": "Als business innovator kun je acteren in de rol van ondernemer. Volgens de laatste inzichten op het gebied van innovatie, startups, onderzoek en design kun je aan de slag met het creëren en uitrollen van een eigen startup die de wereld een beetje beter maakt. Je kunt ideeën genereren voor je startup. Aan de hand van hypotheses en het uitvoeren van praktische experimenten kun je aantonen dat het probleem ook een oplossing nodig heeft. Je bent in staat om de experimenten te structureren in een build-measure-learn aanpak, waarbij het Business Model Canvas als scorecard voor ontwikkeling gebruikt wordt.",
-          "toetsonderdelen": [
-            { "titel": "K1 Responsible Start-ups Project", "vorm": "Beroepsproduct (digitaal inleveren)" },
-            { "titel": "K1 Responsible Start-ups Project", "vorm": "Verantwoordingsverslag" },
-            { "titel": "K1 Responsible Start-ups Project", "vorm": "Geroosterde schriftelijke inzichttoets" }
+            {
+              "titel": "Showcase presentatie en eindgesprek",
+              "vorm": "Mondelinge toets"
+            },
+            {
+              "titel": "Verantwoording innovatie en proces",
+              "vorm": "Verantwoordingsverslag"
+            },
+            {
+              "titel": "Presentatie concept aan opdrachtgever",
+              "vorm": "Presentatie"
+            }
           ]
         }
       ]
     },
     {
       "code": "2.2",
-      "naam": "K2 Innovation Driven Enterprises develop and implement",
+      "naam": "K2 Innovation Driven Enterprises develop and implement | Public Challenges develop and implement | Responsible Startups develop and implement",
       "moduleCode": "M91145-02",
-      "periodes": [2],
+      "periodes": [
+        2
+      ],
       "leeruitkomsten": [
         {
           "titel": "K2 ID-Coaching",
           "studiepunten": 2,
           "omschrijving": "De student positioneert zichzelf als aankomend Business Innovator door bewust gedrag en houdingsaspecten te onderzoeken in een praktijkopdracht, en vertaalt deze inzichten naar een onderbouwd beeld van de eigen professionele identiteit en toekomstige ontwikkeling. En kan deze communiceren in het Engels via een TED-talk",
           "toetsonderdelen": [
-            { "titel": "K2 SLB", "vorm": "Schriftelijke opdracht" },
-            { "titel": "K2 ID-Coaching Vaardigheden Engels", "vorm": "Presentatie" }
+            {
+              "titel": "K2 SLB",
+              "vorm": "Schriftelijke opdracht"
+            },
+            {
+              "titel": "K2 ID-Coaching Vaardigheden Engels",
+              "vorm": "Presentatie"
+            }
           ]
         },
         {
@@ -270,9 +332,18 @@
           "studiepunten": 9,
           "omschrijving": "Als business innovator kun je volgens de laatste inzichten op het gebied van innovatie, onderzoek en design acteren binnen de complexe omgeving van een grote organisatie. Je kunt in groepsverband een veelheid aan ideeën genereren, waaruit je in staat bent een aantal concepten te ontwikkelen. Je kunt deze concepten toetsen op aantrekkelijkheid, haalbaarheid en levensvatbaarheid, zodanig dat hieruit aannemelijk wordt dat de opdrachtgever het gevonden probleem ermee kan oplossen. Je kunt een implementatieplan opstellen waarin je duidelijk maakt welke stappen nog moeten worden genomen, welke risico's er zijn en hoe het nieuwe concept het best vermarkt kan worden. Je kunt je concept en implementatieplan overtuigend presenteren aan de opdrachtgever om goedkeuring voor je project te krijgen.",
           "toetsonderdelen": [
-            { "titel": "Showcase presentatie en eindgesprek", "vorm": "Mondelinge toets" },
-            { "titel": "Verantwoording innovatie en proces", "vorm": "Verantwoordingsverslag" },
-            { "titel": "Presentatie concept aan opdrachtgever", "vorm": "Presentatie" }
+            {
+              "titel": "Showcase presentatie en eindgesprek",
+              "vorm": "Mondelinge toets"
+            },
+            {
+              "titel": "Verantwoording innovatie en proces",
+              "vorm": "Verantwoordingsverslag"
+            },
+            {
+              "titel": "Presentatie concept aan opdrachtgever",
+              "vorm": "Presentatie"
+            }
           ]
         },
         {
@@ -280,79 +351,14 @@
           "studiepunten": 4,
           "omschrijving": "De student kent de elementen die noodzakelijk zijn voor het implementeren van innovaties in verschillende contexten zodanig dat de student zelf in staat is een passend en effectief implementatieplan te formuleren voor een gegeven innovatie ontwerp.",
           "toetsonderdelen": [
-            { "titel": "Implementatieplan", "vorm": "Beroepsproduct (digitaal inleveren)" },
-            { "titel": "Casusopdracht op locatie", "vorm": "Geroosterde schriftelijke inzichttoets" }
-          ]
-        }
-      ]
-    },
-    {
-      "code": "2.2",
-      "naam": "K2 Public Challenges develop and implement",
-      "moduleCode": "M25637-02",
-      "periodes": [2],
-      "leeruitkomsten": [
-        {
-          "titel": "K2 ID-Coaching",
-          "studiepunten": 2,
-          "omschrijving": "De student positioneert zichzelf als aankomend Business Innovator door bewust gedrag en houdingsaspecten te onderzoeken in een praktijkopdracht, en vertaalt deze inzichten naar een onderbouwd beeld van de eigen professionele identiteit en toekomstige ontwikkeling. En kan deze communiceren in het Engels via een TED-talk.",
-          "toetsonderdelen": [
-            { "titel": "K2 SLB", "vorm": "Schriftelijke opdracht" },
-            { "titel": "K2 ID-coaching: vaardigheden Engels", "vorm": "Presentatie" }
-          ]
-        },
-        {
-          "titel": "K2 Verandermanagement",
-          "studiepunten": 4,
-          "omschrijving": "De student kent de elementen die noodzakelijk zijn voor het implementeren van innovaties in verschillende contexten zodanig dat de student zelf in staat is een passend en effectief implementatieplan te formuleren voor een gegeven innovatie ontwerp.",
-          "toetsonderdelen": [
-            { "titel": "Implementatieplan", "vorm": "Beroepsproduct (digitaal inleveren)" },
-            { "titel": "Casusopdracht op locatie", "vorm": "Geroosterde schriftelijke inzichttoets" }
-          ]
-        },
-        {
-          "titel": "K2 Public Challenges Project",
-          "studiepunten": 9,
-          "omschrijving": "Als business innovator kun je volgens de laatste inzichten op het gebied van innovatie, onderzoek en design acteren in de context van het publieke domein. Je kan in deze context de basisbeginselen van Social Design toepassen: Je bent in staat om samen met de belangrijkste betrokkenen door middel van co-creatie een gedragen en levensvatbaar concept met meervoudige waarde te ontwikkelen. Je kan het concept uitwerken in een levensvatbare business case met meetbare impact op de samenleving (Business Design). Je kan ook laten zien welke kwaliteiten als innovator belangrijk zijn wanneer je werkt aan maatschappelijke vraagstukken.",
-          "toetsonderdelen": [
-            { "titel": "K2 Public Challenges Project", "vorm": "Beoordelings-portfolio" },
-            { "titel": "K2 Public Challenges Project", "vorm": "Geroosterde schriftelijke inzichttoets" }
-          ]
-        }
-      ]
-    },
-    {
-      "code": "2.2",
-      "naam": "K2 Responsible Startups develop and implement",
-      "moduleCode": "M17025-02",
-      "periodes": [2],
-      "leeruitkomsten": [
-        {
-          "titel": "K2 ID Coaching",
-          "studiepunten": 2,
-          "omschrijving": "De student positioneert zichzelf als aankomend Business Innovator door bewust gedrag en houdingsaspecten te onderzoeken in een praktijkopdracht, en vertaalt deze inzichten naar een onderbouwd beeld van de eigen professionele identiteit en toekomstige ontwikkeling. En kan deze communiceren in het Engels via een TED-talk.",
-          "toetsonderdelen": [
-            { "titel": "ID-coaching: vaardigheden Engels TED-Talk", "vorm": "Presentatie" },
-            { "titel": "K2 SLB", "vorm": "Schriftelijke opdracht" }
-          ]
-        },
-        {
-          "titel": "K2 Verandermanagement",
-          "studiepunten": 4,
-          "omschrijving": "De student kent de elementen die noodzakelijk zijn voor het implementeren van innovaties in verschillende contexten zodanig dat de student zelf in staat is een passend en effectief implementatieplan te formuleren voor een gegeven innovatie ontwerp.",
-          "toetsonderdelen": [
-            { "titel": "Implementatieplan", "vorm": "Beroepsproduct (digitaal inleveren)" },
-            { "titel": "Casusopdracht op locatie", "vorm": "Geroosterde schriftelijke inzichttoets" }
-          ]
-        },
-        {
-          "titel": "K2 Responsible Startups project",
-          "studiepunten": 9,
-          "omschrijving": "Als business innovator kun je acteren in de rol van ondernemer. Volgens de laatste inzichten op het gebied van innovatie, startups, onderzoek en design kun je aan de slag met het creëren en uitrollen van een eigen startup die de wereld een beetje beter maakt. Je kunt ideeën genereren voor je startup. Aan de hand van hypotheses en het uitvoeren van praktische experimenten kun je aantonen dat het probleem ook een oplossing nodig heeft. Je bent in staat om de experimenten te structureren in een build-measure-learn aanpak, waarbij het Business Model Canvas als scorecard voor ontwikkeling gebruikt wordt. Je kunt een oplossing uitwerken in een aanbod dat past bij de doelgroep die je hebt onderzocht. Je kunt dus een product market fit realiseren. Je kunt overtuigend je startup presenteren en pitchen ten overstaan van externe deskundigen om financiering of andere resources bij stakeholders op te halen. Je kunt tot slot laten zien welke ondernemerskwaliteiten je effectief kunt inzetten als business innovator in een customer development proces.",
-          "toetsonderdelen": [
-            { "titel": "Pitchdeck", "vorm": "Beroepsproduct (digitaal inleveren)" },
-            { "titel": "Schriftelijke inzichtstoets", "vorm": "Geroosterde schriftelijke inzichttoets" },
-            { "titel": "Foundersblog", "vorm": "Verantwoordingsverslag" }
+            {
+              "titel": "Implementatieplan",
+              "vorm": "Beroepsproduct (digitaal inleveren)"
+            },
+            {
+              "titel": "Casusopdracht op locatie",
+              "vorm": "Geroosterde schriftelijke inzichttoets"
+            }
           ]
         }
       ]
@@ -361,22 +367,39 @@
       "code": "2.3",
       "naam": "Keuzeruimte",
       "moduleCode": null,
-      "periodes": [3],
-      "leeruitkomsten": []
+      "periodes": [
+        3
+      ],
+      "leeruitkomsten": [
+        {
+          "titel": "Keuzeruimte",
+          "studiepunten": 15,
+          "omschrijving": "Deze wordt gevuld door de opleiding waar je de keuzemodule volgt.",
+          "toetsonderdelen": []
+        }
+      ]
     },
     {
       "code": "2.4",
       "naam": "K4 Innovatiesprint",
       "moduleCode": "M29311-02",
-      "periodes": [4],
+      "periodes": [
+        4
+      ],
       "leeruitkomsten": [
         {
           "titel": "ID-Coaching",
           "studiepunten": 2,
           "omschrijving": "De student positioneert zich als aankomend Business Innovator richting het werkveld door de eigen professionele identiteit helder te formuleren, onderscheidend vermogen te onderbouwen en houdingsaspecten doelgericht in te zetten bij het benaderen van een passende stageplek en is in staat om dit professioneel over te brengen.",
           "toetsonderdelen": [
-            { "titel": "K4 SLB", "vorm": "Schriftelijke opdracht" },
-            { "titel": "Vaardigheden", "vorm": "Criteriumgericht interview" }
+            {
+              "titel": "K4 SLB",
+              "vorm": "Schriftelijke opdracht"
+            },
+            {
+              "titel": "Vaardigheden",
+              "vorm": "Criteriumgericht interview"
+            }
           ]
         },
         {
@@ -384,9 +407,18 @@
           "studiepunten": 13,
           "omschrijving": "Als Business Innovator kun je voor een zelf gevonden opdrachtgever een onderbouwd projectvoorstel opstellen, zodanig dat het probleem grondig kan worden onderzocht en het innovatieproces helder is. Je kan door gedegen onderzoek een onderbouwde definitieve innovatie-opdracht formuleren, om vervolgens kansen en ideeën voor ruwe concepten te genereren. Deze concepten heb je vervolgens getoetst op aantrekkelijkheid, haalbaarheid en levensvatbaarheid en heb je voor jullie definitieve innovatie ontwerp aannemelijk gemaakt dat er meervoudige waarde wordt gecreëerd. Daarna heb je voor de opdrachtgever een implementatieplan opgezet waarmee het voor de opdrachtgever duidelijk is hoe het innovatie ontwerp verder tot uitvoering kan worden gebracht.",
           "toetsonderdelen": [
-            { "titel": "Innovatiesprint presentatie", "vorm": "Presentatie" },
-            { "titel": "Innovatiesprint portfolio", "vorm": "Beoordelings-portfolio" },
-            { "titel": "Innovatiesprint verantwoording", "vorm": "Verantwoordingsverslag" }
+            {
+              "titel": "Innovatiesprint presentatie",
+              "vorm": "Presentatie"
+            },
+            {
+              "titel": "Innovatiesprint portfolio",
+              "vorm": "Beoordelings-portfolio"
+            },
+            {
+              "titel": "Innovatiesprint verantwoording",
+              "vorm": "Verantwoordingsverslag"
+            }
           ]
         }
       ]
@@ -395,16 +427,28 @@
       "code": "3.1-3.2",
       "naam": "Stage",
       "moduleCode": "M54337-02",
-      "periodes": [1, 2],
+      "periodes": [
+        1,
+        2
+      ],
       "leeruitkomsten": [
         {
           "titel": "Stage",
           "studiepunten": 30,
           "omschrijving": "De student werkt mee binnen een organisatie en voert zelfstandig op systematische wijze een innovatieproject uit zodanig dat de student duurzame waarde voor de organisatie creëert en hierbij zichzelf professioneel ontwikkeld als Business Innovator.",
           "toetsonderdelen": [
-            { "titel": "Persoonlijke ontwikkeling", "vorm": "Beoordelings-portfolio" },
-            { "titel": "Eindppresentatie Innovatieproject", "vorm": "Presentatie" },
-            { "titel": "Verantwoordingsverslag Innovatieproject", "vorm": "Verantwoordingsverslag" }
+            {
+              "titel": "Persoonlijke ontwikkeling",
+              "vorm": "Beoordelings-portfolio"
+            },
+            {
+              "titel": "Eindppresentatie Innovatieproject",
+              "vorm": "Presentatie"
+            },
+            {
+              "titel": "Verantwoordingsverslag Innovatieproject",
+              "vorm": "Verantwoordingsverslag"
+            }
           ]
         }
       ]
@@ -413,15 +457,23 @@
       "code": "3.3",
       "naam": "E1 Mastering the craft of innovation",
       "moduleCode": "M29647-01",
-      "periodes": [3],
+      "periodes": [
+        3
+      ],
       "leeruitkomsten": [
         {
           "titel": "Exploratie voor baanbrekende innovaties",
           "studiepunten": 5,
           "omschrijving": "Je maakt een verkenning waarin je verleden, heden en toekomst meeneemt om een kritisch beeld te schetsen van een specifiek thema zodat je mogelijkheden voor radicale innovaties kunt identificeren en zo een organisatie kan helpen navigeren in de snel veranderende wereld.",
           "toetsonderdelen": [
-            { "titel": "Verkenning als open sollicitatie", "vorm": "Beroepsproduct (digitaal inleveren)" },
-            { "titel": "Onderbouwing van de verkenning", "vorm": "Verantwoordingsverslag" }
+            {
+              "titel": "Verkenning als open sollicitatie",
+              "vorm": "Beroepsproduct (digitaal inleveren)"
+            },
+            {
+              "titel": "Onderbouwing van de verkenning",
+              "vorm": "Verantwoordingsverslag"
+            }
           ]
         },
         {
@@ -429,8 +481,14 @@
           "studiepunten": 5,
           "omschrijving": "Je maakt aan de hand van een scan de verbeterkansen voor een organisatie inzichtelijk zodat het (structurele) innovatievermogen van deze organisatie verbeterd kan worden.",
           "toetsonderdelen": [
-            { "titel": "Scan en adviesrapport", "vorm": "Beroepsproduct (digitaal inleveren)" },
-            { "titel": "Adviesgesprek", "vorm": "Beroepshandeling (met live observatie)" }
+            {
+              "titel": "Scan en adviesrapport",
+              "vorm": "Beroepsproduct (digitaal inleveren)"
+            },
+            {
+              "titel": "Adviesgesprek",
+              "vorm": "Beroepshandeling (met live observatie)"
+            }
           ]
         },
         {
@@ -438,7 +496,10 @@
           "studiepunten": 5,
           "omschrijving": "Je ontwikkelt jezelf op vijf voor jouw relevante actuele innovatievaardigheden zodat je groeit en meer zelfvertrouwen krijgt in je rol als business innovator.",
           "toetsonderdelen": [
-            { "titel": "Ontwikkelportfolio", "vorm": "Beoordelings-portfolio" }
+            {
+              "titel": "Ontwikkelportfolio",
+              "vorm": "Beoordelings-portfolio"
+            }
           ]
         }
       ]
@@ -447,29 +508,57 @@
       "code": "3.4",
       "naam": "Keuzeruimte",
       "moduleCode": null,
-      "periodes": [4],
-      "leeruitkomsten": []
+      "periodes": [
+        4
+      ],
+      "leeruitkomsten": [
+        {
+          "titel": "Keuzeruimte",
+          "studiepunten": 15,
+          "omschrijving": "Deze wordt gevuld door de opleiding waar je de keuzemodule volgt.",
+          "toetsonderdelen": []
+        }
+      ]
     },
     {
       "code": "4.1-4.2",
       "naam": "Keuzeruimte",
       "moduleCode": null,
-      "periodes": [1, 2],
-      "leeruitkomsten": []
+      "periodes": [
+        1,
+        2
+      ],
+      "leeruitkomsten": [
+        {
+          "titel": "Keuzeruimte",
+          "studiepunten": 30,
+          "omschrijving": "Deze wordt gevuld door de opleiding waar je de minor of keuzemodule volgt.",
+          "toetsonderdelen": []
+        }
+      ]
     },
     {
       "code": "4.3-4.4",
       "naam": "Afstuderen",
       "moduleCode": "M77001-01",
-      "periodes": [3, 4],
+      "periodes": [
+        3,
+        4
+      ],
       "leeruitkomsten": [
         {
           "titel": "Afstuderen Business Innovation",
           "studiepunten": 30,
           "omschrijving": "Als business innovator kun je zelfstandig een innovatieproces inrichten en doorlopen. Je voert een gedegen onderzoek uit naar de doelgroep, markt en context van de opdrachtgever. Op basis van analyse van de verzamelde data formuleer je inzichten en kansrichtingen die aantonen dat je een relevant probleem hebt geïdentificeerd dat de opdrachtgever zou kunnen oplossen. Om tot een oplossing te komen, genereer je diverse ideeën die leiden tot de ontwikkeling van een aantal concepten. Via zorgvuldig ontworpen experimenten en iteraties verbeter je deze concepten. Je onderbouwt de aantrekkelijkheid, haalbaarheid, levensvatbaarheid en sociale/ecologisch impact van je innovatieontwerp met bewijzen, en toont zo aan dat het een kansrijke oplossing vormt voor het geïdentificeerde probleem. Je kwantificeert in een business case de verwachte waarde van je ontwerp. In het implementatieplan beschrijf je de benodigde vervolgstappen en mogelijke risico's en het gecreëerde draagvlak. Tenslotte presenteer je je innovatie op compacte en overtuigende wijze.",
           "toetsonderdelen": [
-            { "titel": "Verantwoordingsverslag", "vorm": "Verantwoordingsverslag" },
-            { "titel": "Eindpresentatie", "vorm": "Presentatie" }
+            {
+              "titel": "Verantwoordingsverslag",
+              "vorm": "Verantwoordingsverslag"
+            },
+            {
+              "titel": "Eindpresentatie",
+              "vorm": "Presentatie"
+            }
           ]
         }
       ]
