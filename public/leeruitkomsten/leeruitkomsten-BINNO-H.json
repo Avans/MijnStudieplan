@@ -60,7 +60,7 @@
           ]
         },
         {
-          "titel": "Innovatieproject",
+          "titel": "Innovatieproject 1",
           "studiepunten": 3,
           "omschrijving": "Je kan voor een opdrachtgever met voorgestructureerde en begeleide opdrachten het gehele innovatieproces in korte tijd doorlopen. Je kan hierbij inzichten en kansen creeëren, verrassende concepten bedenken en in grote lijnen aangeven hoe deze te implementeren. Hierdoor heb je inzicht in welke kennis, houding en vaardigheden je voor innovatie nodig hebt.",
           "toetsonderdelen": [
@@ -115,7 +115,7 @@
           ]
         },
         {
-          "titel": "Innovatieproject 2: Innoveren met Blue Ocean methode",
+          "titel": "Innovatieproject 2",
           "studiepunten": 4,
           "omschrijving": "Je kan voor een opdrachtgever met voorgestructureerde en begeleide opdrachten en de geleerde methoden en technieken een nieuw levensvatbaar innovatie-ontwerp ontwikkelen dat meervoudige waarde oplevert. Je kunt daarbij een realisatieplan ontwikkelen dat het aannemelijk maakt dat de gebruikers het concept gaan gebruiken. Je kan je innovatie-ontwerp op overtuigende wijze presenteren aan de opdrachtgever.",
           "toetsonderdelen": [
@@ -155,7 +155,7 @@
           ]
         },
         {
-          "titel": "Innovatieproject",
+          "titel": "Innovatieproject 3",
           "studiepunten": 4,
           "omschrijving": "Je kan met voorgestructureerde en begeleide opdrachten een probleem in kaart brengen voor een opdrachtgever. Je kan op basis van de geleerde onderzoekstheorie en -methoden de bestaande situatie en de gewenste situatie schetsen. Hierbij kan je aantrekkelijke innovatiekansrichtingen en een definitieve innovatieopdracht formuleren. De kansrichtingen hebben de potentie om bij te dragen aan de verduurzaming van de opdrachtgever/de branche. Je kan je visie en de definitieve innovatieopdracht op overtuigende wijze presenteren aan de opdrachtgever.",
           "toetsonderdelen": [
@@ -251,7 +251,7 @@
     },
     {
       "code": "2.1",
-      "naam": "K1: Innovation Driven Enterprises Explore | Public Challenges Explore | Responsible Startups Explore",
+      "naam": "K1: Innovatie Context explore",
       "moduleCode": "M49425-02",
       "periodes": [
         1
@@ -306,7 +306,7 @@
     },
     {
       "code": "2.2",
-      "naam": "K2 Innovation Driven Enterprises develop and implement | Public Challenges develop and implement | Responsible Startups develop and implement",
+      "naam": "K2 Innovatie Context develop and implement",
       "moduleCode": "M91145-02",
       "periodes": [
         2
